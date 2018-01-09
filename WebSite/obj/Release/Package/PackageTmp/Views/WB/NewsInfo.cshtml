@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNews.cshtml";
+}
+@*<div class="cntbanner"><img src="/content/img/cban.jpg" alt="嘉義縣環境保護局banner"></div>*@
+<!-- content -->
+<div class="contwar" id="contentText">
+    <!--cntnav -->
+    <div class="cntnav n1" id="contentText">
+        <p>最新公告</p><a href="#" accesskey="L" title="左方導覽區塊">:::　</a>
+        <ul style="list-style:none;" class="cntmenu">
+            @foreach (var item in Model.NewsBulletinList)
+            {
+                <li><a href="@Url.Action("NewsList", new { new_bulletin_id = item.Value })" title="@item.Text" class="@(item.Value == Model.NewsInfo.NewBulletinId ? "cntok" : "")"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Text</a></li>
+            }
+        </ul>
+    </div>
+    <!--cntnav end-->
+    <!--content -->
+    <div class="content" id="contentText">
+        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Model.NewsInfo.CategoryTitle<span> <a href="@Url.Action("newslist")" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 最新公告 &gt; @Model.NewsInfo.CategoryTitle</span></h1>
+        <div class="newinfo">
+            <h2>@Model.NewsInfo.Title</h2>
+            <h3><span> 發佈日期： </span>@Model.NewsInfo.CreateTime.ToString("yyyy/MM/dd")</h3>
+        </div>
+        <div class="newword scroll">
+           @Html.Raw(Model.NewsInfo.Blog)
+        </div>
+        <p class="u2"><a href="@Url.Action("NewsList", new { new_bulletin_id = Model.NewsInfo.NewBulletinId.ToString() })" title="最新消息列表" class="ubtnred">回列表頁</a></p>
+    </div>
+
+</div>

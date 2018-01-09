@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNews.cshtml";
+}
+
+<!-- content -->
+<div class="contwar" id="contentText">
+    <!--cntnav -->
+
+    <!--cntnav end-->
+    <!--content -->
+    <div class="content" id="contentText">
+        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 各類管制與申報系統<span> <a href="@Url.Action("AddPage")" accesskey="u" title="上方資訊導盲磚">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 各類管制與申報系統 </span></h1>
+        <div class="datetab">
+            <br>
+            <div class="scroll tab400">
+                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" summary="影像區編排表格">
+                    <tbody>
+                        <tr>
+                            <th width="35%" nowrap scope="b">標題</th>
+                            <th width="65%" scope="b">連結</th>
+                        </tr>
+                        @foreach (var item in Model.SystemLinkLists)
+                        {
+                            <tr>
+                                <td scope="a"><div align="left">@item.Title</div></td>
+                                <td scope="c"><div align="left"><a href="@item.Url" target="_blank" title="@item.Title">@item.Url</a></div></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>

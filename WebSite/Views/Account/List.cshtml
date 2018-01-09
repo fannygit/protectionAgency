@@ -1,0 +1,84 @@
+﻿@model EPA.Project.WebSite.Models.AccountListModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string CurrentController = string.Empty;
+    if (ViewContext.RouteData.Values["Controller"] != null)
+    {
+        CurrentController = ViewContext.RouteData.Values["Controller"].ToString();
+    }
+}
+
+@Html.Partial("_ErrorMsg", ViewContext.ViewData)
+<p></p>
+@using (Html.BeginForm("List", CurrentController, FormMethod.Get, new { @class = "pure-form" }))
+{ 
+    <div class="pure-u-1-1" style="text-align:right">
+        @Html.TextBoxFor(p => p.Search, new { placeholder = "請輸入帳號" })
+        <input type="submit" class="pure-button" value="查詢" />
+    </div>
+}
+<p></p>
+@Html.ActionLink("新增", "add", new { page = Model.Page }, new { @class = "pure-button" })
+<p></p>
+<table class="pure-table pure-table-bordered" style="width: 100%">
+    <thead>
+        <tr>
+            <th>帳號</th>
+            <th>角色</th>
+            <th>建立時間</th>
+            <th>最後登入時間</th>
+            <th>狀態</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Data != null)
+        {
+            if (Model.Data.Count == 0)
+            {
+            <tr class="info">
+                <td colspan="6">暫無資料 </td>
+            </tr>
+            }
+            foreach (var Row in Model.Data)
+            {
+            <tr>
+                <td style="text-align: left;">
+                    @Row.Account
+                </td>
+                <td>
+                    @Row.Role
+                </td>
+                <td>
+                    @Row.CreateDate
+                </td>
+                <td>
+                    @(Row.LastLoginTime.HasValue ? Row.LastLoginTime.Value.ToString() : "無")
+                </td>
+                <td>
+                    @((Row.Status == 1)? "啟用":"停用")
+                </td>
+                <td>
+                    @Html.ActionLink("編輯", "Edit",new { id = Row.Id, page = Model.Page },new { })
+                    @if (!User.Identity.Name.Equals(Row.Id))
+                    {
+                        @Html.ActionLink("刪除", "delete", new { id = Row.Id, page = Model.Page }, new { onclick = "return confirm('確定刪除?');" })
+                    }
+                </td>
+            </tr>
+            }
+        }
+        else
+        {
+            <tr class="info">
+                <td colspan="6">暫無資料 </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p></p>
+@{
+    Request.RequestContext.RouteData.Values.Add("Search", Model.Search);
+    @Html.Partial("_Pager", (EPA.Project.WebSite.Models.PagerModel)Model)
+}

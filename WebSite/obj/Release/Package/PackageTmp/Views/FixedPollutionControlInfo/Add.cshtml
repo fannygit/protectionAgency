@@ -1,0 +1,134 @@
+﻿@using EPA.Project.WebSite.Enums;
+@using EPA.Project.WebSite.Library;
+@using System.Web.Script.Serialization;
+@model EPA.Project.WebSite.Models.FixedPollutionControlInfoModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string CurrentController = string.Empty;
+    if (ViewContext.RouteData.Values["Controller"] != null)
+    {
+        CurrentController = ViewContext.RouteData.Values["Controller"].ToString();
+    }
+}
+
+
+<script>
+    function GetLable2() {
+        if ($("#FixedPollutionControlId option:selected").text() != "請選擇") {
+            $.ajax({
+                url: "/FixedPollutionControlInfo/GetLabel2/",
+                data: { nowkey: $("#InId").val(), key: $("#FixedPollutionControlId").val() },
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    $("#InIdDiv").html("");
+                    var markup = "<option value='-1'>請選擇</option>";
+                    for (var x = 0; x < data.length; x++) {
+                        markup += "<option value=" + data[x].Value + ">" + data[x].Text + "</option>";
+                    }
+                    $("#InIdDiv").html(markup).show();
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+        }
+    }
+</script>
+@Html.ActionLink("回上頁", "List", new { page = Model.page }, new { @class = "pure-button" })
+<p>
+    @Html.ValidationMessage("message")
+</p>
+
+@using (Html.BeginForm(Model.Mode == EditPageMode.Create ? "create" : "update",
+    CurrentController, new { page = Model.page }, FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "pure-form pure-form-aligned", id = "f1" }))
+{
+    <fieldset>
+
+        @Html.HiddenFor(p => p.Id)
+        @Html.HiddenFor(p => p.page)
+        @Html.HiddenFor(p => p.Search)
+
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.FixedPollutionControlId)
+            @Html.DropDownList("FixedPollutionControlId", (IEnumerable<SelectListItem>)ViewData["FirstLevelItems"], new { onchange = "GetLable2()" })
+        </div>
+
+        <div class="pure-control-group" >
+            @Html.LabelFor(p => p.InId)
+            <select id="InIdDiv" name="InId">
+                @foreach (var i in (IEnumerable<SelectListItem>)ViewData["SecondLevelItems"])
+                {
+                    <option @(i.Selected ? "selected" : "") value="@i.Value">@i.Text</option>
+                }
+            </select>
+
+        </div>
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.Title)
+            @Html.TextBoxFor(p => p.Title, new { @class = "pure-input-1-2" })
+            @Html.ValidationMessageFor(p => p.Title)
+        </div>
+
+        <div class="pure-control-group">
+            @Html.Label("排序")
+            @Html.TextBoxFor(p => p.orderField, new { @class = "pure-input-1-2" })
+        </div>
+
+        <div class="pure-control-group">
+            @Html.Label("選擇類型")
+            <input type="radio" id="radioUrl" name="radionValue" value="url" @(string.IsNullOrEmpty(Model.Url) ? "" : "checked")> 超連結
+            <input type="radio" id="radioBlog" name="radionValue" value="blog" @(string.IsNullOrEmpty(Model.Blog) ? "" : "checked")> 文章
+        </div>
+
+        <div class="pure-control-group" id="urlDiv" style='@((Model.Mode == EditPageMode.Update) ? (string.IsNullOrEmpty(Model.Url) ? "display:none" : "") : "display:none")'>
+            @Html.LabelFor(p => p.Url)
+                        @Html.TextAreaFor(p => p.Url, new { @class = "pure-input-1-2", id = "url1" })
+                        @Html.ValidationMessageFor(p => p.Url)
+        </div>
+
+        <div class="pure-control-group" id="blogDiv" style='@((Model.Mode == EditPageMode.Update) ? (string.IsNullOrEmpty(Model.Blog) ? "display:none" : "") : "display:none")'>
+            @Html.LabelFor(p => p.Blog)
+                        @Html.TextAreaFor(p => p.Blog, new { @class = "ckeditor", id = "blog1" })
+                        @Html.ValidationMessageFor(p => p.Blog)
+        </div>
+
+
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.CreateTime)
+            @Model.CreateTime
+            @Html.HiddenFor(p => p.CreateTime)
+        </div>
+
+
+
+        <div class="pure-control-group">
+            <label></label>
+            @if (Model.Mode == EditPageMode.Create)
+            {
+                <input type="submit"  value=" 新 增" class="pure-button" />
+            }
+            else if (Model.Mode == EditPageMode.Update)
+            {
+                <input type="submit" value="修 改" class="pure-button" />
+            }
+
+        </div>
+    </fieldset>
+}
+
+
+<script>
+
+    $("#radioUrl").click(function () {
+        $("#urlDiv").show();
+        $("#blogDiv").hide();
+    });
+    $("#radioBlog").click(function () {
+        $("#blogDiv").show();
+        $("#urlDiv").hide();
+    });
+</script>
+

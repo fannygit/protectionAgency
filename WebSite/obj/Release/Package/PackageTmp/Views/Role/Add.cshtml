@@ -1,0 +1,110 @@
+﻿@using EPA.Project.WebSite.Enums;
+@using EPA.Project.WebSite.Library;
+@using System.Web.Script.Serialization;
+@model EPA.Project.WebSite.Models.RoleModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string CurrentController = string.Empty;
+    if (ViewContext.RouteData.Values["Controller"] != null)
+    {
+        CurrentController = ViewContext.RouteData.Values["Controller"].ToString();
+    }
+}
+@Html.ActionLink("回上頁", "List", new { page = Model.page }, new { @class = "pure-button" })
+<p>
+    @Html.ValidationMessage("message")
+</p>
+<script language="JavaScript">
+    function check() {
+        var isChecked = $('input[name=PermissionMappingList]:checked').length > 0;
+        if (isChecked) {
+            return true;
+        } else {
+            alert("請至少選擇一項權限!")
+            return false;
+        }
+    }
+</script>
+@using (Html.BeginForm(Model.Mode == EditPageMode.Create ? "create" : "update",
+    CurrentController, new { page = Model.page }, FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "pure-form pure-form-aligned" }))
+{
+    <fieldset>
+
+        @Html.HiddenFor(p => p.Id)
+
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.Name)
+            @Html.TextBoxFor(p => p.Name)
+            @Html.ValidationMessageFor(p => p.Name)
+        </div>
+
+        <div class="pure-control-group">
+            @Html.Label("權限")
+            @{
+                <div style="position: relative;left: 7%;">
+                    @foreach (var strName in Model.PermissionList)
+                    {
+                        bool isChecked = false;
+                        if (Model.PermissionList != null)
+                        {
+                            foreach (string strNameChoose in Model.PermissionMappingList)
+                            {
+                                isChecked = strName.Id.Equals(strNameChoose);
+                                if (isChecked)
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                        <label style="width:auto;margin-left:80px" for="@(strName.Name)">
+                            <input @(isChecked ? "checked=checked" : "") type="checkbox" id="@(strName.Id)" name="PermissionMappingList" value="@strName.Id" />
+                            @strName.Name
+                        </label>
+                        <br />
+                    }
+                </div>
+            }
+
+        </div>
+
+        @if (Model.Mode == EditPageMode.Update)
+        {
+            <div class="pure-control-group">
+                @Html.LabelFor(p => p.Createdate)
+                @Model.Createdate
+                @Html.HiddenFor(p => p.Createdate)
+            </div>
+
+            <div class="pure-control-group">
+                @Html.LabelFor(p => p.Updatedate)
+                @Model.Updatedate
+                @Html.HiddenFor(p => p.Updatedate)
+            </div>
+
+            <div class="pure-control-group">
+                @Html.LabelFor(p => p.Createuserid)
+                @Model.Createuserid
+            </div>
+
+            <div class="pure-control-group">
+                @Html.LabelFor(p => p.Updateuserid)
+                @Model.Updateuserid
+            </div>
+        }
+
+        <div class="pure-control-group">
+            <label></label>
+            @if (Model.Mode == EditPageMode.Create)
+            {
+                <input type="submit" value="新 增" class="pure-button" onclick="return check('PermissionsIdChoose');" />
+            }
+            else if (Model.Mode == EditPageMode.Update)
+            {
+                <input type="submit" value="修 改" class="pure-button" onclick="return check('PermissionsIdChoose');" />
+            }
+
+        </div>
+    </fieldset>
+}

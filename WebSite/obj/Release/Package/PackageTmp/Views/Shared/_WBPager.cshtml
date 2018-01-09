@@ -1,0 +1,78 @@
+﻿@using EPA.Project.WebSite.Models
+@model WBModel
+@{
+
+    string URL = "/" + Request.RequestContext.RouteData.Values["controller"] + "/" + Request.RequestContext.RouteData.Values["action"];
+    int ii = 1;
+    foreach (var i in Request.RequestContext.RouteData.Values)
+    {
+        if (i.Key != "controller" && i.Key != "action")
+        {
+            if (ii == 1)
+            {
+                URL += "?" + i.Key + "=" + i.Value;
+            }
+            else
+            {
+                URL += "&" + i.Key + "=" + i.Value;
+            }
+        }
+    }
+}
+
+
+<div class="green-black">
+    <a href='@(URL + "?page=1")' title="第一頁" class="gblackbtn">第一頁</a>
+    @if (Model.Page > 1)
+    {
+        <a href="@(URL + "?page=" + (Model.Page - 1))" title="上一頁" class="gblackbtn">«</a>
+    }
+    @if (Model.Page > 5)
+    {
+        <a href="@(URL + "?page=" + (Model.Page - 5))" title="上5頁" class="gblackbtn">上5頁</a>
+    }
+    @if (Model.TotalPages < 5)
+    {
+        int index = 0;
+        for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            if (i == Model.Page)
+            {
+                <a href='@(URL + "?page=" + i)' title="@i" class="current">@i</a>
+            }
+            else
+            {
+                <a href='@(URL + "?page=" + i)' title="@i" class="gblackbtn">@i</a>
+            }
+            index++;
+            if (index == 5)
+            {
+                <a href="@(URL + "?page=" + (i + 5))" title="下5頁" class="gblackbtn">下5頁</a>
+                break;
+            }
+        }
+
+        if (index == 5)
+        {
+            <a href='@(URL + "?page=" + Model.TotalPages)'>...@Model.TotalPages </a>
+        }
+    }
+    @if (Model.Page < Model.TotalPages)
+    {
+        <a href="@(URL + "?page=" + (Model.Page + 1))" title="下一頁" class="gblackbtn">»</a>
+    }
+    <a href="@(URL + "?page=" + Model.TotalPages)" title="最後一頁" class="gblackbtn">最後一頁</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

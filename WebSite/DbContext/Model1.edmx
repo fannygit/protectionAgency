@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="sample_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="fixed_pollution_control">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+          <Property Name="orderfield" Type="int" Nullable="false" />
+          <Property Name="img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fixed_pollution_control_in">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+          <Property Name="orderfield" Type="int" Nullable="false" />
+          <Property Name="img" Type="nvarchar" MaxLength="50" />
+          <Property Name="fixed_pollution_control_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fixed_pollution_control_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fixed_pollution_control_id" Type="int" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" />
+          <Property Name="blog" Type="nvarchar(max)" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+          <Property Name="inid" Type="int" Nullable="false" />
+          <Property Name="orderfield" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="important_link">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="banner_img" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="news_bulletin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="news_bulletin_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="new_bulletin_id" Type="int" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" />
+          <Property Name="blog" Type="nvarchar(max)" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="related_file_download">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="category_title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="category_download" Type="nvarchar(max)" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+          <Property Name="orderfield" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="related_file_download_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="related_file_download_id" Type="int" Nullable="false" />
+          <Property Name="sub_file" Type="nvarchar" MaxLength="50" />
+          <Property Name="sub_title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="sub_no" Type="int" Nullable="false" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="system_link">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="create_time" Type="datetime" Nullable="false" />
+          <Property Name="orderfield" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLoginTime" Type="datetime" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateUserID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="UpdateUserID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="IP" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="T_Account_Role_Mapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="AccountId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CreateUserId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Permission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateUserId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="UpdateUserId" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateUserId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="UpdateUserId" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Role_Permission_Mapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="PermissionId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CreateUserId" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="sample_dbModelStoreContainer">
+          <EntitySet Name="fixed_pollution_control" EntityType="Self.fixed_pollution_control" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fixed_pollution_control_in" EntityType="Self.fixed_pollution_control_in" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fixed_pollution_control_info" EntityType="Self.fixed_pollution_control_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="important_link" EntityType="Self.important_link" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="news_bulletin" EntityType="Self.news_bulletin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="news_bulletin_info" EntityType="Self.news_bulletin_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="related_file_download" EntityType="Self.related_file_download" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="related_file_download_info" EntityType="Self.related_file_download_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="system_link" EntityType="Self.system_link" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Account" EntityType="Self.T_Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Account_Role_Mapping" EntityType="Self.T_Account_Role_Mapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Permission" EntityType="Self.T_Permission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Role" EntityType="Self.T_Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Role_Permission_Mapping" EntityType="Self.T_Role_Permission_Mapping" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sample_dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="T_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUserID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UpdateUserID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IP" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Account_Role_Mapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_Permission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UpdateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UpdateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Role_Permission_Mapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PermissionId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Account" EntityType="Self.T_Account" />
+          <EntitySet Name="T_Account_Role_Mapping" EntityType="Self.T_Account_Role_Mapping" />
+          <EntitySet Name="T_Permission" EntityType="Self.T_Permission" />
+          <EntitySet Name="T_Role" EntityType="Self.T_Role" />
+          <EntitySet Name="T_Role_Permission_Mapping" EntityType="Self.T_Role_Permission_Mapping" />
+          <EntitySet Name="important_link" EntityType="sample_dbModel.important_link" />
+          <EntitySet Name="news_bulletin_info" EntityType="sample_dbModel.news_bulletin_info" />
+          <EntitySet Name="related_file_download_info" EntityType="sample_dbModel.related_file_download_info" />
+          <EntitySet Name="news_bulletin" EntityType="sample_dbModel.news_bulletin" />
+          <EntitySet Name="fixed_pollution_control" EntityType="sample_dbModel.fixed_pollution_control" />
+          <EntitySet Name="fixed_pollution_control_in" EntityType="sample_dbModel.fixed_pollution_control_in" />
+          <EntitySet Name="fixed_pollution_control_info" EntityType="sample_dbModel.fixed_pollution_control_info" />
+          <EntitySet Name="related_file_download" EntityType="sample_dbModel.related_file_download" />
+          <EntitySet Name="system_link" EntityType="sample_dbModel.system_link" />
+        </EntityContainer>
+        <EntityType Name="important_link">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="banner_img" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="news_bulletin_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="new_bulletin_id" Type="Int32" Nullable="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="blog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="related_file_download_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="related_file_download_id" Type="Int32" Nullable="false" />
+          <Property Name="sub_file" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sub_title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sub_no" Type="Int32" Nullable="false" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="news_bulletin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="fixed_pollution_control">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="orderfield" Type="Int32" Nullable="false" />
+          <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="fixed_pollution_control_in">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="orderfield" Type="Int32" Nullable="false" />
+          <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fixed_pollution_control_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fixed_pollution_control_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fixed_pollution_control_id" Type="Int32" Nullable="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="blog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="inid" Type="Int32" Nullable="false" />
+          <Property Name="orderfield" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="related_file_download">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="category_title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="category_download" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="orderfield" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="system_link">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="orderfield" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sample_dbModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="T_Account">
+            <EntityTypeMapping TypeName="sample_dbModel.T_Account">
+              <MappingFragment StoreEntitySet="T_Account">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+                <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Account_Role_Mapping">
+            <EntityTypeMapping TypeName="sample_dbModel.T_Account_Role_Mapping">
+              <MappingFragment StoreEntitySet="T_Account_Role_Mapping">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Permission">
+            <EntityTypeMapping TypeName="sample_dbModel.T_Permission">
+              <MappingFragment StoreEntitySet="T_Permission">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="UpdateUserId" ColumnName="UpdateUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Role">
+            <EntityTypeMapping TypeName="sample_dbModel.T_Role">
+              <MappingFragment StoreEntitySet="T_Role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="UpdateUserId" ColumnName="UpdateUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Role_Permission_Mapping">
+            <EntityTypeMapping TypeName="sample_dbModel.T_Role_Permission_Mapping">
+              <MappingFragment StoreEntitySet="T_Role_Permission_Mapping">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="important_link">
+            <EntityTypeMapping TypeName="sample_dbModel.important_link">
+              <MappingFragment StoreEntitySet="important_link">
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="banner_img" ColumnName="banner_img" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="news_bulletin_info">
+            <EntityTypeMapping TypeName="sample_dbModel.news_bulletin_info">
+              <MappingFragment StoreEntitySet="news_bulletin_info">
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="blog" ColumnName="blog" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="new_bulletin_id" ColumnName="new_bulletin_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="related_file_download_info">
+            <EntityTypeMapping TypeName="sample_dbModel.related_file_download_info">
+              <MappingFragment StoreEntitySet="related_file_download_info">
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="sub_no" ColumnName="sub_no" />
+                <ScalarProperty Name="sub_title" ColumnName="sub_title" />
+                <ScalarProperty Name="sub_file" ColumnName="sub_file" />
+                <ScalarProperty Name="related_file_download_id" ColumnName="related_file_download_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="news_bulletin">
+            <EntityTypeMapping TypeName="sample_dbModel.news_bulletin">
+              <MappingFragment StoreEntitySet="news_bulletin">
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fixed_pollution_control">
+            <EntityTypeMapping TypeName="sample_dbModel.fixed_pollution_control">
+              <MappingFragment StoreEntitySet="fixed_pollution_control">
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fixed_pollution_control_in">
+            <EntityTypeMapping TypeName="sample_dbModel.fixed_pollution_control_in">
+              <MappingFragment StoreEntitySet="fixed_pollution_control_in">
+                <ScalarProperty Name="fixed_pollution_control_id" ColumnName="fixed_pollution_control_id" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fixed_pollution_control_info">
+            <EntityTypeMapping TypeName="sample_dbModel.fixed_pollution_control_info">
+              <MappingFragment StoreEntitySet="fixed_pollution_control_info">
+                <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+                <ScalarProperty Name="inid" ColumnName="inid" />
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="blog" ColumnName="blog" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="fixed_pollution_control_id" ColumnName="fixed_pollution_control_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="related_file_download">
+            <EntityTypeMapping TypeName="sample_dbModel.related_file_download">
+              <MappingFragment StoreEntitySet="related_file_download">
+                <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="category_download" ColumnName="category_download" />
+                <ScalarProperty Name="category_title" ColumnName="category_title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="system_link">
+            <EntityTypeMapping TypeName="sample_dbModel.system_link">
+              <MappingFragment StoreEntitySet="system_link">
+                <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+                <ScalarProperty Name="create_time" ColumnName="create_time" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

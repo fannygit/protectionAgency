@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <title>行政院環境保護署固定污染源管制資訊網</title>
+    <meta name="keywords" content="行政院環保署空保處-固定污染源管制資訊網" />
+    <meta name="description" content="空氣污染源是指會排放空氣污染物之物理或化學操作單元，大致可分為兩大類：固定污染源及移動污染源。 固定污染源為非因本身動力而改變位置之污染源，包括工廠、場之煙囪排放、廠內逸散、營建施工產生之粉塵逸散、露天燃燒等。 大至發電廠，小至個人使用噴霧劑，只要是會排放空氣污染物之個體，不論大小均視為固定污染源。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link href="/content/css/reset.css" rel="stylesheet">
+    <link href="/content/css/main.css" rel="stylesheet">
+    <link href="/content/css/drawer.css" rel="stylesheet">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="/content/css/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/content/css/flexslider1.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/content/css/flexslider3.css" type="text/css" media="screen" />
+    <!-- mobiscroll CSS -->
+
+    <link rel="stylesheet" href="/content/css/jqueryMobile.css">
+    <link href="/content/css/mobiscroll.css" rel="stylesheet" type="text/css">
+
+    @RenderSection("css", false)
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><!--manu -->
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.js"></script><!--manu -->
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><!--manu -->
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script src="/content/js/drawer.min.js" charset="utf-8"></script><!--manu -->
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script src="/content/js/modernizr.js"></script><!--banner -->
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script src="https://use.fontawesome.com/317bc7bcdc.js"></script>
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <!-- Syntax Highlighter -->
+    <script type="text/javascript" src="/content/js/shCore.js"></script>
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script type="text/javascript" src="/content/js/shBrushXml.js"></script>
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script type="text/javascript" src="/content/js/shBrushJScript.js"></script>
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <!-- Optional FlexSlider Additions -->
+    <script src="/content/js/jquery.easing.js"></script>
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    <script src="/content/js/jquery.mousewheel.js"></script>
+    <noscript> 您的瀏覽器不支援JavaScript功能 </noscript>
+    @RenderSection("js", false)
+</head>
+<body class="drawer drawer--top drawer--navbarTopGutter bg1">
+    <header class="drawer-navbar drawer-navbar--fixed" role="banner">
+        <div class="drawer-container">
+            <div class="drawer-navbar-header g100">
+                <div class="drawer-brand f_left">
+                    <a href="@Url.Action("Index")" accesskey="C" title="行政院環保署空保處-固定污染源管制資訊網" tabindex="01">行政院環保署空保處-固定污染源管制資訊網</a>
+                </div>
+            </div>
+            <!--字體大中小js-->
+            <script type="text/javascript">
+	            function $jq(xixi) {
+	                return document.getElementById(xixi);
+	            }
+                //修改字型大小
+	            function doZoom(size){
+	                if(size==14){
+	                    $jq("contentText").style.fontSize = size + "px";
+	                    $jq("fs14").style.display = "";
+	                    $jq("fs16").style.display = "none";
+	                    $jq("fs18").style.display = "none";
+	                }
+	                if(size==16){
+	                    $jq("contentText").style.fontSize = size + "px";
+	                    $jq("fs14").style.display = "none";
+	                    $jq("fs16").style.display = "";
+	                    $jq("fs18").style.display = "none";
+	                }
+	                if(size==18){
+	                    $jq("contentText").style.fontSize = size + "px";
+	                    $jq("fs14").style.display = "none";
+	                    $jq("fs16").style.display = "none";
+	                    $jq("fs18").style.display = "";
+	                }
+	            }
+            </script>
+            <noscript>當script無法執行時可按 "Ctrl+P" 鍵替代，進行列印 ；可按 "Backspace ←" 鍵替代，回上一頁 ；可按 "Ctrl+ +" 鍵替代，字體放大，可按 "Ctrl+ -" 鍵替代，字體縮小</noscript>
+            <!--字體大中小js end-->
+            <!--字體大中小 star-->
+            <div class="r_right">
+                <ul style="list-style: none;" class="fontfs ">
+                    <li><p class="ahide">字級選擇：</p></li>
+                    <li><div id="fs14" style="display: none"><a href="javascript:doZoom(18)" class="fradius gary" tabindex="02" title="大字體">大</a> <a href="javascript:doZoom(16)" class="fradius gary" tabindex="03" title="中字體">中</a> <span class="fradius red">小</span> </div></li>
+                    <li><div id="fs16"><a href="javascript:doZoom(18)" class="fradius gary" tabindex="02" title="大字體">大</a> <span class="fradius red">中</span> <a href="javascript:doZoom(14)" class="fradius gary" tabindex="03" title="小字體">小</a></div></li>
+                    <li><div id="fs18" style="display: none"><span class="fradius red" title="大字體">大</span> <a href="javascript:doZoom(16)" class="fradius gary" tabindex="02" title="中字體">中</a> <a href="javascript:doZoom(14)" class="fradius gary" tabindex="03" title="小字體">小</a></div></li>
+                </ul>
+                <div class="clear"></div>
+                <!--字體大中小 end-->
+                <!--三&weblink-->
+                <div class="toplink">
+                    <button type="button" class="drawer-toggle drawer-hamburger">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="drawer-hamburger-icon"></span>
+                    </button>
+                    <div class="topa">
+                        <a href="#" accesskey="U" title="上方資訊導盲磚" tabindex="04">:::</a>
+                        <a href="https://www.epa.gov.tw/mp.asp?mp=epa" title="環保署首頁" tabindex="05">環保署首頁</a> |
+                        <a href="https://air.epa.gov.tw/Public/Main.aspx" class="topa" title="空保處首頁" tabindex="06">空保處首頁</a> |
+                        <a href="@Url.Action("Sitemap")" class="topa" title="網站導覽" tabindex="07">網站導覽</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--三&weblink end-->
+            <!--按鈕-->
+
+            @Html.Partial("_MenuPartial", (EPA.Project.WebSite.Models.WBModel)Model)
+        
+            <!--按鈕-->
+            <!--按鈕JS star-->
+            <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+            </script>
+            <noscript>當script無法執行時,請點選此超連結<a href="@Url.Action("Sitemap")" title="網站導覽">網站導覽</a></noscript>
+            <!--按鈕JS star-->
+        </div>
+    </header>
+
+    <!-- jQuery -->
+    <!-- FlexSlider -->
+    <script defer src="/content/js/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+		controlNav: false,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+    </script>
+<noscript>您的瀏覽器不支援此腳本</noscript>
+    
+<!-- FlexSlider end -->
+    @RenderBody()
+    <!--footer-->
+    <div class="footer" id="contentText">
+        <div class="hid">
+            <img src="/content/img/aa.png" class="aaimg" align="right" alt="通過AA優先等級無障礙網頁檢測">
+            <div class="footerh1">
+                環　保　署：10042台北市中正區中華路一段83號　總機：886-2-23117722<br>
+                第二辦公室：10042台北市中正區秀山街 4號14樓　總機：886-2-23712121<br>
+            </div>
+            <div class="footerh2"><a href="@Url.Action("privacy")" title="隱私權保護政策">隱私權保護政策</a> | <a href="@Url.Action("website")" title="網站安全政策">網站安全政策</a> | <a href="@Url.Action("open")" title="網站資料開放宣告">網站資料開放宣告</a></div>
+            
+        </div>
+        <div class="footerhid">
+            <div>
+                環保署：<br>
+                10042台北市中正區中華路一段83號　<br>
+                總機：886-2-23117722<br><br>
+
+                第二辦公室：<br>
+                10042台北市中正區秀山街 4號14樓　<br>
+                總機：886-2-23712121<br>
+                (空保處 &amp; 溫減管理室 )<br>
+            </div><br>
+            <img src="/content/img/aa.png" class="aaimg" alt="通過AA優先等級無障礙網頁檢測">
+        </div><br>
+    </div>
+    <!--footer end-->
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿** 反白顯示
+     將重建的資料表
+       [dbo].[T_Account_Permissions_Mapping]
+     將卸除的叢集索引
+       無
+     將建立的叢集索引
+       無
+     資料可能的問題
+       正在卸除資料行 [dbo].[T_Account_Permissions_Mapping].[Permission]，因此可能導致資料遺失。
+       必須加入資料表 [dbo].[T_Account_Permissions_Mapping] 的資料行 [dbo].[T_Account_Permissions_Mapping].[PermissionId]，但該資料行沒有預設值而且不允許
+         NULL 值。如果資料表包含資料，則 ALTER 指令碼將無法運作。若要避免這個問題，您必須: 在資料行加入預設值、將它標示為允許 NULL 值，或啟用產生智慧型預設值做為部署選項。
+
+** 使用者動作
+     卸除
+       [dbo].[T_Account_Permissions_Mapping] 上的未命名條件約束 (預設條件約束)
+     重建資料表
+       [dbo].[T_Account_Permissions_Mapping] (資料表)
+
+** 支援動作
+
+正在卸除資料行 [dbo].[T_Account_Permissions_Mapping].[Permission]，因此可能導致資料遺失。
+必須加入資料表 [dbo].[T_Account_Permissions_Mapping] 的資料行 [dbo].[T_Account_Permissions_Mapping].[PermissionId]，但該資料行沒有預設值而且不允許 NULL 值。如果資料表包含資料，則 ALTER 指令碼將無法運作。若要避免這個問題，您必須: 在資料行加入預設值、將它標示為允許 NULL 值，或啟用產生智慧型預設值做為部署選項。
+專案和目標資料庫的定序設定不同。可能發生部署錯誤。
+

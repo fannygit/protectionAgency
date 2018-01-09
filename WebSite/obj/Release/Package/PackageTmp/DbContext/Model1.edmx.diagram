@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b59384f6f0794fe58b211c7674183225" Name="Diagram1">
+        <EntityTypeShape EntityType="sample_dbModel.T_Account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sample_dbModel.T_Account_Role_Mapping" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sample_dbModel.T_Permission" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sample_dbModel.T_Role" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sample_dbModel.T_Role_Permission_Mapping" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sample_dbModel.important_link" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="sample_dbModel.news_bulletin_info" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="sample_dbModel.related_file_download_info" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="sample_dbModel.news_bulletin" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="sample_dbModel.fixed_pollution_control" Width="3.375" PointX="7.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sample_dbModel.fixed_pollution_control_in" Width="3.25" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="sample_dbModel.fixed_pollution_control_info" Width="1.5" PointX="5.375" PointY="10.75" />
+        <EntityTypeShape EntityType="sample_dbModel.related_file_download" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="sample_dbModel.system_link" Width="1.5" PointX="9.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

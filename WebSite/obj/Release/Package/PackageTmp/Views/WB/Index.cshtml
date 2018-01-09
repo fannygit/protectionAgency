@@ -1,0 +1,135 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutWebSite.cshtml";
+}
+    <!-- content -->
+    <div class="content">
+        <div class="ban" id="main" role="main">
+            <div class="banner">
+                <div class="batop">
+                    <!-- banner -->
+                    <section class="slider">
+                        <div class="flexslider">
+                            <ul style="list-style: none;" class="slides">
+                                <li><img src="/content/img/b1.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b2.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b3.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b4.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b5.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b6.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b7.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b8.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b9.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                                <li><img src="/content/img/b10.jpg" alt="行政院環境保護署固定污染源管制資訊網形象圖" /></li>
+                            </ul>
+                            <p class="btop"></p>
+                        </div>
+                    </section>
+                    <!-- banner end-->
+                    <div class="idxnew" id="contentText">
+                        <a href="#" accesskey="C" title="上方資訊導盲磚">:::　</a>
+                        <div class="idxnewh1"><h1><span>What's New </span>最新活動&amp;消息</h1></div>
+                        <div class="nword">
+                            <ul style="list-style: none;">
+                                @foreach (var n in Model.News)
+                                {
+                                    <li style="list-style: none;"><a href="@Url.Action("newsinfo", new { info_id = n.Id })" title="最新消息"><span class="day">@n.CreateTime.ToString("yyyy/MM/dd") </span><span class="green">【最新消息】</span><span class="blueidx">@n.Title</span></a></li>
+                                }
+                            </ul>
+                        </div>
+                        @*<div class="more"><a href="@Url.Action("newslist")" title="更多最新消息"><i class="fa fa-angle-right" aria-hidden="true"></i>更多最新消息</a></div>*@
+                    </div>
+                    <div class="clear"></div>
+
+                    <!-- 首頁按鈕 -->
+                    <div class="idxnav" id="contentText">
+                        <ul class="linehr">
+                            <li class="linehrh1"><a href="@Url.Action("newslist")" class="in1" title="最新公告"><img src="/content/img/n1.png" alt="最新公告"><div>最新公告</div></a></li>
+                            @*動態新增start*@
+                            @foreach (var item in Model.FixedPollutionList)
+                            {
+                                if (string.IsNullOrEmpty(item.Key.Img))
+                                {
+                                    <li class="linehrh1"><a href="@Url.Action("About", new { f1 = item.Key.Value })" class="@item.Key.Css" title="@item.Key.Text"><img src="content/img/n2.png" alt="@item.Key.Text"><div>@item.Key.Text</div></a></li>
+                                }
+                                else
+                                {
+                                    <li class="linehrh1"><a href="@Url.Action("About", new { f1 = item.Key.Value })" class="@item.Key.Css" title="@item.Key.Text"><img src="@Url.Content("~/File/Get?FileId=" + item.Key.Img)" alt="@item.Key.Text"><div>@item.Key.Text</div></a></li>
+                                }
+                            }
+                            @*動態新增end
+                            <li class="linehrh1"><a href="about.html" class="in3" title="固定污染源許可制度"><img src="/content/img/n3.png" alt="固定污染源許可制度"><div>固定污染源許可制度</div></a></li>
+                            <li class="linehrh1"><a href="about.html" class="in4" title="空氣污染防制費"><img src="/content/img/n4.png" alt="空氣污染防制費"><div>空氣污染防制費</div></a></li>
+                            <li class="linehrh1"><a href="about.html" class="in5" title="逸散污染管制"><img src="/content/img/n5.png" alt="逸散污染管制"><div>逸散污染管制</div></a></li>
+                            <li class="linehrh1"><a href="about.html" class="in6" title="有害空氣污染物"><img src="/content/img/n6.png" alt="有害空氣污染物"><div>有害空氣污染物</div></a></li>
+                            <li class="linehrh1"><a href="about.html" class="in7" title="固定源小百科"><img src="/content/img/n7.png" alt="固定源小百科"><div>固定源小百科</div></a></li>*@
+
+                            <li class="linehrh1"><a href="@Url.Action("AddPage")" class="in2" title="各類管制與申報系統"><img src="/content/img/n13.png" alt="各類管制與申報系統"><div>各類管制與申報系統</div></a></li>
+                            <li class="linehrh1"><a href="@Url.Action("Download")" class="in3" title="下載文件專區"><img src="/content/img/n14.png" alt="下載文件專區"><div>下載文件專區</div></a></li>
+                            <li class="linehrh1"><a href="@Url.Action("AddPage2")" class="in4" title="相關法規與解釋函查詢"><img src="/content/img/n15.png" alt="相關法規與解釋函查詢"><div>相關法規與解釋函查詢</div></a></li>
+                           
+                            <li class="linehrh1"><a href="https://epamail.epa.gov.tw/front/mailboxhome" target="_blank" class="in6" title="意見信箱"><img src="/content/img/n17.png" alt="意見信箱"><div>意見信箱</div></a></li>
+                        </ul>
+                    </div>
+                    <!-- 首頁按鈕 end-->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- content end-->
+    <!-- 相關連結 -->
+    <div class="adban">
+        <div id="main" role="main">
+            <section class="slider1">
+                <div class="flexslider1 carousel">
+                    <ul class="slides">
+                        @foreach (var i in Model.ImportantLinkLists)
+                        {
+                            <li><a href="@i.Url" title="@i.Title"><img src="@Url.Content("~/File/Get?FileId=" + i.BannerImg)" alt="@i.Title" /></a></li>
+                        }
+                       
+                        @*<li><a href="#" title="BANNER關鍵字"><img src="/content/img/c2.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c3.png" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c4.png" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c5.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c6.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c7.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c8.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c9.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c1.png" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c2.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c3.png" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c4.png" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c5.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c6.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c7.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c8.jpg" alt="BANNER關鍵字" /></a></li>
+                        <li><a href="#" title="BANNER關鍵字"><img src="/content/img/c9.jpg" alt="BANNER關鍵字" /></a></li>*@
+                    </ul>
+                </div>
+            </section>
+            <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider1').flexslider({
+        animation: "slide",
+        animationLoop: false,
+		controlNav: false,
+        itemWidth:120,
+        itemMargin:24,
+        minItems: 2,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+            </script>
+            <noscript>無法支持其中的腳本的瀏覽器。</noscript>
+
+        </div>
+    </div>
+    <!-- 相關連 結end -->
+  

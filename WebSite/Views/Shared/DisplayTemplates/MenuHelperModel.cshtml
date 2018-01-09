@@ -1,0 +1,13 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+
+<ul>
+    @foreach (var node in Model.Nodes) { 
+        <li@(node.IsInCurrentPath & !node.IsRootNode ? " class=pure-menu-selected":"")@(node.IsClickable ? "":" class=pure-menu-heading")>@Html.DisplayFor(m => node) 
+            @if (node.Children.Any()) {
+                @Html.DisplayFor(m => node.Children)
+            }
+        </li>
+    }
+</ul>

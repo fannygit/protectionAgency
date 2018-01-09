@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNews.cshtml";
+}
+
+<div class="contwar" id="contentText">
+    <!--cntnav -->
+
+    <div class="cntnav n1">
+        <p>@Model.FixedPollutionControlInfo.CategoryTitle</p><a href="#" accesskey="L" title="左方導覽區塊">:::　</a>
+        <ul style="list-style:none;" class="cntmenu">
+            @foreach (var item in Model.FixedPollutionControlInList)
+            {
+                if (item.Value.Count > 0)
+                {
+                    <li><a href="@Url.Action("About", new { f2 = item.Key.Id.ToString(), f1 = item.Key.FixedPollutionControlId })" title="@item.Key.Title" class="@((Model.f2 == item.Key.Id.ToString() ? "cntok" : ""))" ><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Key.Title</a> </li>
+                    foreach (var i in item.Value)
+                    {
+                        <div><a href="@Url.Action("About", new { f3 = i.Key, f2 = item.Key.Id.ToString(), f1 = item.Key.FixedPollutionControlId })" class="@(Model.f3 == i.Key.ToString() ? "kbtnb" : "kbtn")" title="@i.Value"><i class="fa fa-caret-right" aria-hidden="true"></i> @i.Value</a></div>
+                    }
+
+                }
+                else
+                {
+                    <li><a href="@Url.Action("About", new { f2 = item.Key.Id.ToString(), f1 = item.Key.FixedPollutionControlId })" title="@item.Key.Title" class="@((Model.f2 == item.Key.Id.ToString() ? "cntok" : ""))"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Key.Title</a></li>
+                }
+            }
+        </ul>
+    </div>
+    <!--cntnav end-->
+    <!--content -->
+    <div class="content" id="contentText">
+        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Model.FixedPollutionControlInfo.CategoryTitleIN<span> <a href="#" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 固定污染源管制 &gt; @Model.FixedPollutionControlInfo.CategoryTitle &gt; @Model.FixedPollutionControlInfo.CategoryTitleIN</span></h1>
+        <div class="contbtn">
+            <ul style="list-style:none;">
+                @foreach (var i in Model.FixedPollutionControlInfoList)
+                {
+                    <li><a href="@Url.Action("About", new { f3 = i.Id, f2 = Model.f2, f1= Model.f1 })" class="@(Model.f3 == i.Id.ToString() ? "conb" : "con")" title="@i.Title">@i.Title</a></li>
+                }
+            </ul>
+        </div>
+        <div class="word">
+            @if(!string.IsNullOrEmpty(Model.FixedPollutionControlInfo.Blog))
+            {
+                @Html.Raw(Model.FixedPollutionControlInfo.Blog)
+            }
+            else
+            {
+                <a href="@Model.FixedPollutionControlInfo.Url" title="超連結">◆ @Model.FixedPollutionControlInfo.Url </a>
+            }
+        </div>
+
+
+    </div>
+
+
+</div>

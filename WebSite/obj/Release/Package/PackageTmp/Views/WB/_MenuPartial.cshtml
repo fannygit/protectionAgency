@@ -1,0 +1,82 @@
+﻿@using EPA.Project.WebSite.Models
+@model WBModel
+<nav class="drawer-nav" role="navigation">
+    <ul class="drawer-menu">
+        <li class="drawer-dropdown">
+            <a class="drawer-menu-item" href="@Url.Action("NewsList")" data-target="#" data-toggle="dropdown" role="button" aria-expanded="false" title="最新公告" tabindex="08">最新公告 <span class="drawer-caret"></span></a>
+            <ul class="drawer-dropdown-menu">
+                @foreach (var item in Model.NewsBulletinList)
+                {
+                    var url = Url.Action("newslist", new { new_bulletin_id = item.Value });
+                    if (item.IsUrl)
+                    {
+                        url = item.Url;
+                    }
+                    <li><a class="drawer-dropdown-menu-item" href="@url" target="@(item.IsUrl ? "_blank" : "")" title="@item.Text" tabindex="09"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Text</a></li>
+                }
+            </ul>
+        </li>
+        <li class="drawer-dropdown">
+            <a class="drawer-menu-item" href="@Url.Action("About")" data-target="#" data-toggle="dropdown" role="button" aria-expanded="false" title="固定污染管制" tabindex="12">固定污染管制  <span class="drawer-caret"></span></a>
+            <ul class="drawer-dropdown-menu">
+                @foreach (var item in Model.FixedPollutionList)
+                {
+                    if (item.Value.Any())
+                    {
+                        <li>
+                            <a class="drawer-dropdown-menu-item" href="@Url.Action("About", new { f1 = item.Key.Value })" title="@item.Key.Text" tabindex="13"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Key.Text</a>
+                            <ul class="idxmenu">
+                                @foreach (var i in item.Value)
+                                {
+                                    <li><a href="@Url.Action("About", new { f2 = i.Key, f1 = item.Key.Value })" title="@i.Value" class="kbtn" tabindex="14"><i class="fa fa-caret-right" aria-hidden="true"></i> @i.Value</a></li>
+                                }
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li><a class="drawer-dropdown-menu-item" href="@Url.Action("About")" title="@item.Key.Text" tabindex="17"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Key.Text</a></li>
+                    }
+                }
+            </ul>
+        </li>
+        <li class="drawer-dropdown">
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="27">各類管制與申報系統 <span class="drawer-caret"></span> </a>
+            <ul class="drawer-dropdown-menu">
+                @foreach (var item in Model.SystemLinkLists)
+                {
+                    <li><a href="@item.Url" target="_blank" class="drawer-dropdown-menu-item" title="@item.Title"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Title</a></li>
+                }
+                @*<li><a href="https://totalquantity.epa.gov.tw/ERC/homepage/home.do?method=goHome" target="_blank" class="drawer-dropdown-menu-item" title="空氣污染物削減量差額管理平台"><i class="fa fa-angle-right" aria-hidden="true"></i> 空氣污染物削減量差額管理平台</a></li>
+                <li><a href="https://apmis.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="固定空氣污染源管理資訊系統"><i class="fa fa-angle-right" aria-hidden="true"></i> 固定空氣污染源管理資訊系統</a></li>
+                <li><a href="https://air10.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="空氣污染費網路申報及查詢系統"><i class="fa fa-angle-right" aria-hidden="true"></i>空氣污染費網路申報及查詢系統</a></li>
+                <li><a href="https://epaconsweb.epa.gov.tw/AccountEPAConsWeb/LoginEPAConsWeb.aspx?ReturnUrl=%2f" target="_blank" class="drawer-dropdown-menu-item" title="營建工程污染管制及收費管理系統"><i class="fa fa-angle-right" aria-hidden="true"></i>營建工程污染管制及收費管理系統</a></li>
+                <li><a href="http://a0-empncet-ap.epa.gov.tw/dispPageBox/EmpHP.aspx?ddsPageID=HP" target="_blank" class="drawer-dropdown-menu-item" title="逸散性粒狀污染物管制"><i class="fa fa-angle-right" aria-hidden="true"></i> 逸散性粒狀污染物管制</a></li>
+                <li><a href="https://cems.epa.gov.tw/CemsFacReport/" class="drawer-dropdown-menu-item" target="_blank" title="自動連續監測CEMS"><i class="fa fa-angle-right" aria-hidden="true"></i> 自動連續監測CEMS</a></li>
+                <li><a href="http://aers.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="重大空氣污染事件應變處理查詢系統"><i class="fa fa-angle-right" aria-hidden="true"></i> 重大空氣污染事件應變處理查詢系統</a></li>
+                <li><a href="https://totalquantity.epa.gov.tw/ERC_TEST/homepage/home.do?method=goHome" target="_blank" class="drawer-dropdown-menu-item" title="空氣污染物削減量差額管理平台(測試版)"><i class="fa fa-angle-right" aria-hidden="true"></i> 空氣污染物削減量差額管理平台(測試版)</a></li>*@
+            </ul>
+        </li>
+        
+        <li class="drawer-dropdown">
+            <a class="drawer-menu-item" href="@Url.Action("download")" title="下載文件專區" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="27">下載文件專區 <span class="drawer-caret"></span> </a>
+            <ul class="drawer-dropdown-menu">
+                @foreach (var item in Model.RelatedFileDownloadList)
+                {
+                    <li><a href="@Url.Action("download", new { download_id = item.Value })" class="drawer-dropdown-menu-item" title="@item.Text" tabindex="28"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Text</a></li>
+                }
+            </ul>
+        </li>
+        <li><a class="drawer-menu-item" href="https://epamail.epa.gov.tw/front/mailboxhome" target="_blank" title="意見信箱" tabindex="31">意見信箱</a></li>
+        <li class="drawer-dropdown hide">
+            <a class="drawer-menu-item" href="#" title="資訊安全" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="27">
+                資訊安全 <span class="drawer-caret"></span>
+            </a>
+            <ul class="drawer-dropdown-menu">
+                <li><a href="@Url.Action("privacy")" class="drawer-dropdown-menu-item" title="隱私權政策"><i class="fa fa-angle-right" aria-hidden="true"></i> 隱私權政策</a></li>
+                <li><a href="@Url.Action("website")" class="drawer-dropdown-menu-item" title="網站安全政策"><i class="fa fa-angle-right" aria-hidden="true"></i> 網站安全政策</a></li>
+                <li><a href="@Url.Action("open")" class="drawer-dropdown-menu-item" title="網站資料開放宣告"><i class="fa fa-angle-right" aria-hidden="true"></i> 網站資料開放宣告</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

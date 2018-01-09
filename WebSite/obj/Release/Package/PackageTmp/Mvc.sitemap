@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="總覽" controller="Account" action="Info" roles="Admin">
+    <!--帳號管理 Start-->
+    <!--<mvcSiteMapNode title="後台人員管理" clickable="false" roles=""></mvcSiteMapNode>
+    <mvcSiteMapNode title="帳號維護" controller="Account" action="List" roles="Admin">
+      <mvcSiteMapNode title="帳號維護新增" controller="Account" action="Add"/>
+      <mvcSiteMapNode title="帳號維護修改" controller="Account" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="角色維護" controller="Role" action="List" roles="Admin">
+      <mvcSiteMapNode title="角色維護新增" controller="Role" action="Add"/>
+      <mvcSiteMapNode title="角色維護修改" controller="Role" action="Edit"/>
+    </mvcSiteMapNode>-->
+    <mvcSiteMapNode title="首頁大分類" controller="FixedPollutionControl" action="List" roles="Admin">
+      <mvcSiteMapNode title="首頁大分類新增" controller="FixedPollutionControl" action="Add"/>
+      <mvcSiteMapNode title="首頁大分類修改" controller="FixedPollutionControl" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="側欄標題" controller="FixedPollutionControlIn" action="List" roles="Admin">
+      <mvcSiteMapNode title="側欄標題" controller="FixedPollutionControlIn" action="Add"/>
+      <mvcSiteMapNode title="側欄標題" controller="FixedPollutionControlIn" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="內容小標文章" controller="FixedPollutionControlInfo" action="List" roles="Admin">
+      <mvcSiteMapNode title="內容小標文章" controller="FixedPollutionControlInfo" action="Add"/>
+      <mvcSiteMapNode title="內容小標文章" controller="FixedPollutionControlInfo" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="訊息公告分類" controller="NewsBulletin" action="List" roles="Admin">
+      <mvcSiteMapNode title="訊息公告分類新增" controller="NewsBulletin" action="Add"/>
+      <mvcSiteMapNode title="訊息公告分類修改" controller="NewsBulletin" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="訊息公告內容" controller="NewsBulletinInfo" action="List" roles="Admin">
+      <mvcSiteMapNode title="訊息公告內容新增" controller="NewsBulletinInfo" action="Add"/>
+      <mvcSiteMapNode title="訊息公告內容修改" controller="NewsBulletinInfo" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="重要連結" controller="ImportantLink" action="List" roles="Admin">
+      <mvcSiteMapNode title="重要連結新增" controller="ImportantLink" action="Add"/>
+      <mvcSiteMapNode title="重要連結修改" controller="ImportantLink" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="各類管制與申報系統" controller="SystemLink" action="List" roles="Admin">
+      <mvcSiteMapNode title="各類管制與申報系統新增" controller="SystemLink" action="Add"/>
+      <mvcSiteMapNode title="各類管制與申報系統修改" controller="SystemLink" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="下載專區分類" controller="RelatedFileDownload" action="List" roles="Admin">
+      <mvcSiteMapNode title="下載專區分類新增" controller="RelatedFileDownload" action="Add"/>
+      <mvcSiteMapNode title="下載專區分類修改" controller="RelatedFileDownload" action="Edit"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="下載專區內容" controller="RelatedFileDownloadInfo" action="List" roles="Admin">
+      <mvcSiteMapNode title="下載專區內容新增" controller="RelatedFileDownloadInfo" action="Add"/>
+      <mvcSiteMapNode title="下載專區內容修改" controller="RelatedFileDownloadInfo" action="Edit"/>
+    </mvcSiteMapNode>
+   
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

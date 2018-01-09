@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNews.cshtml";
+}
+
+<!-- content -->
+<div class="contwar" id="contentText">
+    <!--cntnav -->
+
+    <div class="cntnav n1" id="contentText">
+        <p>相關連結</p>
+        <ul class="cntmenu">
+            <li><a href="@Url.Action("WebLink")" title="重要連結" class="cntok"><i class="fa fa-angle-right" aria-hidden="true"></i> 重要連結</a></li>
+            <li><a href="https://oaout.epa.gov.tw/law/" title="相關法規" target="_blank"><i class="fa fa-angle-right" aria-hidden="true"></i> 相關法規</a></li>
+            <li><a href="http://epq.epa.gov.tw/default.aspx" title="研究報告" target="_blank"><i class="fa fa-angle-right" aria-hidden="true"></i> 研究報告</a></li>
+            <li><a href="http://doc.epa.gov.tw/IFDEWebBBS_EPA/ExternalBBS.aspx" title="公告查詢" target="_blank"><i class="fa fa-angle-right" aria-hidden="true"></i> 公告查詢</a></li>
+        </ul>
+    </div>
+    <!--cntnav end-->
+    <!--content -->
+    <div class="content" id="contentText">
+        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 重要連結<span> <a href="@Url.Action("WebLink")" accesskey="u" title="上方資訊導盲磚">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 相關連結 &gt; 重要連結</span></h1>
+        <div class="datetab">
+            <br>
+            <div class="scroll tab400">
+                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" summary="影像區編排表格">
+                    <tbody>
+                        <tr>
+                            <th width="22%" scope="b">連結</th>
+                            <th width="78%" nowrap scope="b">標題</th>
+                        </tr>
+                        @foreach (var item in Model.ImportantLinkLists)
+                        {
+                            <tr>
+                                <td scope="c"><div align="center"><a href="@item.Url" title="@item.Title"><img src="@Url.Content("~/File/Get?FileId=" + item.BannerImg)" alt="@item.Title" class="linkimg"></a></div></td>
+                                <td scope="a"><div align="left"><a href="@item.Url" title="@item.Title">@item.Title</a></div></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        @{
+            @Html.Partial("_WBPager", (EPA.Project.WebSite.Models.PagerModel)Model)
+        }
+    </div>
+
+
+</div>

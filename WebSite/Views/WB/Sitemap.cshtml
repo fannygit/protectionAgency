@@ -1,0 +1,105 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNews.cshtml";
+}
+
+<!-- content -->
+<div class="contwar" id="contentText">
+    <!--cntnav -->
+
+    <div class="cntnav n1">
+        <p>網站導覽</p><a href="#" accesskey="L" title="左方導覽區塊">:::　</a>
+        <ul style="list-style:none;" class="cntmenu">
+            <li><a href="@Url.Action("sitemap")" title="網站導覽" class="cntok"><i class="fa fa-angle-right" aria-hidden="true"></i> 網站導覽</a></li>
+            <li><a href="https://epamail.epa.gov.tw/front/mailboxhome" target="_blank" title="意見信箱"><i class="fa fa-angle-right" aria-hidden="true"></i> 意見信箱</a></li>
+            <li><a href="@Url.Action("privacy")" title="隱私權政策"><i class="fa fa-angle-right" aria-hidden="true"></i> 隱私權政策</a></li>
+            <li><a href="@Url.Action("website")" title="網站安全政策"><i class="fa fa-angle-right" aria-hidden="true"></i>網站安全政策</a></li>
+            <li><a href="@Url.Action("open")" title="網站資料開放宣告"><i class="fa fa-angle-right" aria-hidden="true"></i>網站資料開放宣告</a></li>
+        </ul>
+    </div>
+    <!--cntnav end-->
+    <!--content -->
+    <div class="content">
+        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 網站導覽<span> <a href="#" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 網站導覽</span></h1>
+        <div>
+            <br>
+            <p>
+                本網站依無障礙網頁設計原則建置，網站的主要內容分為四大區塊：<br>
+                1. 上方功能區塊、2. 左方導覽區塊、3. 中央內容區塊、4.右方相關連結區塊。
+            </p>
+            <p>本網站的快速鍵﹝Accesskey﹞設定如下：</p>
+            <p class="green1">
+                Alt+U：上方功能區塊，包括回首頁、網站導覽、快速連結選擇等。<br>
+                Alt+L：左方導覽區塊，為本網站的主選單區。<br>
+                Alt+C：中央內容區塊，為本頁主要內容區。<br>
+                Alt+R：右方相關資訊區塊，其他相關連結區。(若網站為三欄式架構，可使用此快速鍵，兩欄式網站不適用此快速鍵)<br>
+            </p>
+            <br>
+            ※當本網站項目頁籤無法以滑鼠點選時，您可利用以下鍵盤操作方式瀏覽資料
+            <p class="green1">
+                ← → 或 ↑↓：按左右鍵或上下鍵移動標籤順序。<br>
+                Home 或 End→：可直接跳至標籤第一項或者最後一項。 <br>
+                Tab：停留於該標籤後,可利用Tab鍵跳至內容瀏覽該筆資料，遇到radio按鈕時請配合使← → 或↑↓鍵移動項目順序。 <br>
+                Tab + Shift：按Tab + Shift可往回跳至上一筆資料；當跳回至標籤項目時您可繼續利用← → 或↑↓鍵移動標籤順序。<br>
+            </p>
+            <ul class="sitemap">
+                <li class="dropdown in2">
+                    <a href="@Url.Action("newslist")" data-toggle="dropdown" title="關於本局">　1. 最新公告<i class="icon-arrow"></i></a>
+                    <ul class="dropdown-menu1">
+                        @{
+                            int index = 0;
+                            foreach (var item in Model.NewsBulletinList)
+                            {
+                                index++;
+                                <li><a href="@Url.Action("newslist", new { new_bulletin_id = item.Value })" title="@item.Text">1-@index @item.Text</a></li>
+                            }
+                        }
+                    </ul>
+                </li>
+                <li class="dropdown in3">
+                    <a href="@Url.Action("About")" data-toggle="dropdown" title="固定污染管制">　2. 固定污染管制<i class="icon-arrow"></i></a>
+                    <ul class="dropdown-menu1">
+                        @{
+                            int index2 = 0;
+                            foreach (var item in Model.FixedPollutionList)
+                            {
+                                index2++;
+                                <li><a href="@Url.Action("About")" title="@item.Key.Text" >2-@index2 @item.Key.Text</a></li>
+                            }
+                        }
+                    </ul>
+                </li>
+                <li class="dropdown in4">
+                    <a href="#" data-toggle="dropdown" title="相關連結">　3. 相關連結</a>
+                    <ul class="dropdown-menu1">
+                        <li><a href="https://totalquantity.epa.gov.tw/ERC/homepage/home.do?method=goHome" target="_blank" title="空氣污染物削減量差額管理平台">3-1空氣污染物削減量差額管理平台</a></li>
+                        <li><a href="http://ernet.epa.gov.tw/"  target="_blank" title="固定污染源管理資訊系統">3-2固定污染源管理資訊系統</a></li>
+                        <li><a href="https://air10.epa.gov.tw/" target="_blank" title="空氣污染費網路申報及查詢系統">3-3空氣污染費網路申報及查詢系統</a></li>
+                        <li><a href="https://epaconsweb.epa.gov.tw/AccountEPAConsWeb/LoginEPAConsWeb.aspx?ReturnUrl=%2f" target="_blank"  title="營建工程污染管制及收費管理系統">3-4營建工程污染管制及收費管理系統</a></li>
+                        <li><a href="http://a0-empncet-ap.epa.gov.tw/dispPageBox/EmpHP.aspx?ddsPageID=HP" target="_blank" title="逸散性粒狀污染物管制">3-6逸散性粒狀污染物管制</a></li>
+                        <li><a href="https://cems.epa.gov.tw/CemsFacReport/" target="_blank" title="自動連續監測CEMS">3-7自動連續監測CEMS</a></li>
+                        <li><a href="http://aers.epa.gov.tw/"  target="_blank" title="重大空氣污染事件應變處理查詢系統">3-8重大空氣污染事件應變處理查詢系統</a></li>
+                        <li><a href="http://ernet.epa.gov.tw/"  target="_blank" title="固定空氣污染源管理資訊系統">3-9固定空氣污染源管理資訊系統</a></li>
+                        <li><a href="https://totalquantity.epa.gov.tw/ERC_TEST/homepage/home.do?method=goHome" target="_blank"  title="空氣污染物削減量差額管理平台(測試版)">3-10空氣污染物削減量差額管理平台(測試版)</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown in5">
+                    <a href="@Url.Action("download")" data-toggle="dropdown" title="下載專區">　4. 下載專區<i class="icon-arrow"></i></a>
+                    <ul class="dropdown-menu1">
+                        @{
+                            int index4=0;
+                            foreach (var item in Model.RelatedFileDownloadList)
+                            {
+                                index4++;
+                                <li><a href="@Url.Action("download", new { download_id = item.Value })" title="@item.Text">4-@index4 @item.Text</a></li>
+                            }
+                        }
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>

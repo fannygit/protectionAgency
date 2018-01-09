@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="a209de94-04ac-488c-b705-26f2f1864c3d" ChangeDateTime="06/26/2015 02:57:54">
+    <Property Name="ElementName" Value="[dbo].[T_Account_Permissions_Mapping].[RoleId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Account_Permissions_Mapping]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Permission" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="643b89de-e41c-4614-8f91-c003de19be8e" ChangeDateTime="06/26/2015 02:58:15">
+    <Property Name="ElementName" Value="[dbo].[T_Account_Permissions_Mapping].[Permission]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Account_Permissions_Mapping]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PermissionId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3e06c0c6-df04-46e6-99e1-34f95ba242d2" ChangeDateTime="06/26/2015 02:59:20">
+    <Property Name="ElementName" Value="[dbo].[T_Account_Permissions_Mapping].[PermissionId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Account_Permissions_Mapping]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Permission" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="07fa5ea3-4197-42dd-842d-6d8e229023b1" ChangeDateTime="06/26/2015 04:02:06">
+    <Property Name="ElementName" Value="[dbo].[T_Account_Area_Mapping].[RoleId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Account_Area_Mapping]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AccountId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ff593c51-7a60-446f-a0f4-a36f6fedaef0" ChangeDateTime="06/26/2015 04:02:11">
+    <Property Name="ElementName" Value="[dbo].[T_Account_Area_Mapping].[PermissionId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Account_Area_Mapping]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AreaId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4e730aa2-eb2f-45c0-bdf3-618372bd71a1" ChangeDateTime="06/29/2015 06:28:04">
+    <Property Name="ElementName" Value="[dbo].[T_Member_Friends].[InviteID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Member_Friends]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Inviter" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9c7077a2-6576-477e-8d49-098633768b7b" ChangeDateTime="06/29/2015 06:28:12">
+    <Property Name="ElementName" Value="[dbo].[T_Member_Friends].[Inviter]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Member_Friends]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InviterMemberID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="60145ec0-e4d4-4b01-8dde-7a4f3269cce5" ChangeDateTime="06/29/2015 09:02:07">
+    <Property Name="ElementName" Value="[dbo].[T_Account_Permissions_Mapping].[Permission]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Account_Permissions_Mapping]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PermissionId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="214f6851-7df0-480f-8ed6-5803addbfebe" ChangeDateTime="07/24/2015 07:53:33">
+    <Property Name="ElementName" Value="[dbo].[T_Permission].[Permission]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Permission]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="da6faaa5-022f-470a-a223-ec549480b47d" ChangeDateTime="07/24/2015 07:53:48">
+    <Property Name="ElementName" Value="[dbo].[T_Role].[RoleName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[T_Role]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+</Operations>

@@ -1,0 +1,75 @@
+﻿@using EPA.Project.WebSite.Enums;
+@using EPA.Project.WebSite.Library;
+@using System.Web.Script.Serialization;
+@model EPA.Project.WebSite.Models.NewsBulletinInfoModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string CurrentController = string.Empty;
+    if (ViewContext.RouteData.Values["Controller"] != null)
+    {
+        CurrentController = ViewContext.RouteData.Values["Controller"].ToString();
+    }
+}
+@Html.ActionLink("回上頁", "List", new { page = Model.page }, new { @class = "pure-button" })
+<p>
+@Html.ValidationMessage("message")
+</p>
+
+@using (Html.BeginForm(Model.Mode == EditPageMode.Create ? "create" : "update", 
+    CurrentController, new { page = Model.page }, FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "pure-form pure-form-aligned" }))
+{
+	<fieldset>	
+        @Html.HiddenFor(p=>p.Id)
+        @Html.HiddenFor(p => p.page)
+        @Html.HiddenFor(p => p.Search)
+
+        <div class="pure-control-group">
+            @Html.Label("最新公告分類")
+            @Html.DropDownList("NewBulletinId", (IEnumerable<SelectListItem>)ViewData["FirstLevelItems"])
+            @Html.ValidationMessageFor(p => p.NewBulletinId)
+        </div>
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.Title)
+			@Html.TextBoxFor(p => p.Title, new { @class = "pure-input-1-2" })
+			@Html.ValidationMessageFor(p => p.Title)
+		</div>
+
+		@*<div class="pure-control-group">
+			@Html.LabelFor(p => p.Url)
+			@Html.TextAreaFor(p => p.Url, new { @class = "pure-input-1-2" })
+			@Html.ValidationMessageFor(p => p.Url)
+		</div>*@
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.Blog)
+            <br />
+            <br />
+			@Html.TextAreaFor(p => p.Blog, new { @class = "ckeditor" })
+			@Html.ValidationMessageFor(p => p.Blog)
+		</div>
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.CreateTime)
+			@Model.CreateTime
+			@Html.HiddenFor(p => p.CreateTime)
+		</div>
+
+
+
+		<div class="pure-control-group">
+            <label></label>
+            @if (Model.Mode == EditPageMode.Create)
+            {
+                <input type="submit" value="新 增" class="pure-button" />
+            }
+            else if (Model.Mode == EditPageMode.Update)
+            {
+                <input type="submit" value="修 改" class="pure-button" />
+            }
+           
+        </div>
+	</fieldset>
+}

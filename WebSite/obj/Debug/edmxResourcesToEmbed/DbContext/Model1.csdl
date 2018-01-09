@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sample_dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="T_Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Account" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateUserID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpdateUserID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IP" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_Account_Role_Mapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_Permission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpdateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpdateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Role_Permission_Mapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PermissionId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateUserId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_Account" EntityType="Self.T_Account" />
+    <EntitySet Name="T_Account_Role_Mapping" EntityType="Self.T_Account_Role_Mapping" />
+    <EntitySet Name="T_Permission" EntityType="Self.T_Permission" />
+    <EntitySet Name="T_Role" EntityType="Self.T_Role" />
+    <EntitySet Name="T_Role_Permission_Mapping" EntityType="Self.T_Role_Permission_Mapping" />
+    <EntitySet Name="important_link" EntityType="sample_dbModel.important_link" />
+    <EntitySet Name="news_bulletin_info" EntityType="sample_dbModel.news_bulletin_info" />
+    <EntitySet Name="related_file_download_info" EntityType="sample_dbModel.related_file_download_info" />
+    <EntitySet Name="news_bulletin" EntityType="sample_dbModel.news_bulletin" />
+    <EntitySet Name="fixed_pollution_control" EntityType="sample_dbModel.fixed_pollution_control" />
+    <EntitySet Name="fixed_pollution_control_in" EntityType="sample_dbModel.fixed_pollution_control_in" />
+    <EntitySet Name="fixed_pollution_control_info" EntityType="sample_dbModel.fixed_pollution_control_info" />
+    <EntitySet Name="related_file_download" EntityType="sample_dbModel.related_file_download" />
+    <EntitySet Name="system_link" EntityType="sample_dbModel.system_link" />
+  </EntityContainer>
+  <EntityType Name="important_link">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="banner_img" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="news_bulletin_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="new_bulletin_id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="blog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="related_file_download_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="related_file_download_id" Type="Int32" Nullable="false" />
+    <Property Name="sub_file" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sub_title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sub_no" Type="Int32" Nullable="false" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="news_bulletin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="fixed_pollution_control">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="orderfield" Type="Int32" Nullable="false" />
+    <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="fixed_pollution_control_in">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="orderfield" Type="Int32" Nullable="false" />
+    <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fixed_pollution_control_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fixed_pollution_control_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fixed_pollution_control_id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="blog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="inid" Type="Int32" Nullable="false" />
+    <Property Name="orderfield" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="related_file_download">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="category_download" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="orderfield" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="system_link">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="orderfield" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,75 @@
+﻿@model PaginationModel
+
+@BuildFirstLink()
+
+@foreach (var link in Model.PaginationLinks)
+{
+    @BuildLink(link)
+}
+
+@BuilderLastLink()
+
+@helper BuildFirstLink()
+    {
+    if (Model.PaginationLinks.Count > 0)
+    { 
+        //<li><a href="1">First Page</a></li>
+    }
+}
+
+@helper BuilderLastLink()
+    {
+    if (Model.PaginationLinks.Count > 0)
+    {
+        //<li><a href="@Html.Raw(Model.PaginationLinks.Count.ToString())">Last Page</a> </li>
+    }
+}
+
+ @helper BuildLink(PaginationLink link)
+ {
+     var rootBuilder = new TagBuilder("li");
+     var aBuilder = new TagBuilder("a");
+     if (link.Url == null)
+     {
+         aBuilder.MergeAttribute("href", "javascript:;");
+     }
+     else
+     {
+         aBuilder.MergeAttribute("href", link.Url);
+     }
+
+     if (link.IsCurrent)
+     {
+         aBuilder.SetInnerText(link.DisplayText);
+         rootBuilder.MergeAttribute("class", "disabled");
+         rootBuilder.InnerHtml = aBuilder.ToString();
+         @Html.Raw(rootBuilder.ToString())
+         return;
+     }
+
+     if (link.DisplayText == "«")
+     {
+         aBuilder.SetInnerText("<");
+         rootBuilder.InnerHtml = (aBuilder.ToString());
+        @Html.Raw(rootBuilder.ToString())
+     }
+     else if (link.DisplayText == "»")
+     {
+         aBuilder.SetInnerText(">");
+         rootBuilder.InnerHtml = (aBuilder.ToString());
+        @Html.Raw(rootBuilder.ToString())
+     }
+     else if (link.DisplayText == "...")
+     {
+        aBuilder.SetInnerText("...");
+
+        rootBuilder.InnerHtml = (aBuilder.ToString());
+        @Html.Raw(rootBuilder.ToString())
+     }
+     else
+     {
+         aBuilder.SetInnerText(link.DisplayText);
+         rootBuilder.InnerHtml = (aBuilder.ToString());
+        @Html.Raw(rootBuilder.ToString())
+     }    
+}

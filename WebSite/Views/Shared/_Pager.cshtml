@@ -1,0 +1,15 @@
+﻿@using EPA.Project.WebSite.Models
+@model PagerModel
+
+@if (Model.TotalPages > 1)
+{
+    <ul class="pure-paginator">
+        @Html.Pager(Model.PageSize, Model.Page, Model.TotalRecords).Options(o => o
+        .DisplayTemplate("PagerTemplate")
+        .RouteValues(Request.RequestContext.RouteData.Values)
+        .AddRouteValue("PageSize", Model.PageSize)
+        )
+    </ul>
+}
+
+

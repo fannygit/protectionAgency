@@ -1,0 +1,36 @@
+﻿** 反白顯示
+     將重建的資料表
+       無
+     將卸除的叢集索引
+       無
+     將建立的叢集索引
+       無
+     資料可能的問題
+       無
+
+** 使用者動作
+     建立
+       [dbo].[T_Account] (資料表)
+       [dbo].[T_Account_Role_Mapping] (資料表)
+       [dbo].[T_Permission] (資料表)
+       [dbo].[T_Role] (資料表)
+       [dbo].[T_Role_Permission_Mapping] (資料表)
+       [dbo].[DF_T_Account_Status] (預設條件約束)
+       [dbo].[DF_T_Account_CreateDate] (預設條件約束)
+       預設條件約束: [dbo].[T_Account] 上的未命名條件約束 (預設條件約束)
+       預設條件約束: [dbo].[T_Account] 上的未命名條件約束 (預設條件約束)
+       預設條件約束: [dbo].[T_Account_Role_Mapping] 上的未命名條件約束 (預設條件約束)
+       預設條件約束: [dbo].[T_Permission] 上的未命名條件約束 (預設條件約束)
+       預設條件約束: [dbo].[T_Permission] 上的未命名條件約束 (預設條件約束)
+       預設條件約束: [dbo].[T_Role] 上的未命名條件約束 (預設條件約束)
+       預設條件約束: [dbo].[T_Role] 上的未命名條件約束 (預設條件約束)
+       預設條件約束: [dbo].[T_Role_Permission_Mapping] 上的未命名條件約束 (預設條件約束)
+       [dbo].[T_Role].[Id].[MS_Description] (擴充屬性)
+       [dbo].[T_Role].[Name].[MS_Description] (擴充屬性)
+       [dbo].[T_Role].[CreateDate].[MS_Description] (擴充屬性)
+
+** 支援動作
+
+資料庫已啟用 Vardecimal 支援，但專案卻已停用。如需有關如何關閉 Vardecimal 支援的詳細資訊，請參閱《SQL Server 線上叢書》。
+專案和目標資料庫的定序設定不同。可能發生部署錯誤。
+

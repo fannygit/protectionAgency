@@ -1,0 +1,72 @@
+﻿@using EPA.Project.WebSite.Enums;
+@using EPA.Project.WebSite.Library;
+@using System.Web.Script.Serialization;
+@model EPA.Project.WebSite.Models.PermissionModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string CurrentController = string.Empty;
+    if (ViewContext.RouteData.Values["Controller"] != null)
+    {
+        CurrentController = ViewContext.RouteData.Values["Controller"].ToString();
+    }
+}
+@Html.ActionLink("回上頁", "List", new { page = Model.page }, new { @class = "pure-button" })
+<p>
+@Html.ValidationMessage("message")
+</p>
+
+@using (Html.BeginForm(Model.Mode == EditPageMode.Create ? "create" : "update", 
+    CurrentController, new { page = Model.page }, FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "pure-form pure-form-aligned" }))
+{
+	<fieldset>	
+
+					@Html.HiddenFor(p => p.Id)
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.Permission)
+			@Html.TextBoxFor(p => p.Permission, new { @class = "pure-input-1-2" })
+			@Html.ValidationMessageFor(p => p.Permission)
+		</div>
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.Createdate)
+			@Model.Createdate
+			@Html.HiddenFor(p => p.Createdate)
+		</div>
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.Updatedate)
+			@Html.EditorFor(p => p.Updatedate)
+			@Html.ValidationMessageFor(p => p.Updatedate)
+		</div>
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.Createuserid)
+			@Html.TextBoxFor(p => p.Createuserid, new { @class = "pure-input-1-2" })
+			@Html.ValidationMessageFor(p => p.Createuserid)
+		</div>
+
+		<div class="pure-control-group">
+			@Html.LabelFor(p => p.Updateuserid)
+			@Html.TextBoxFor(p => p.Updateuserid, new { @class = "pure-input-1-2" })
+			@Html.ValidationMessageFor(p => p.Updateuserid)
+		</div>
+
+
+
+		<div class="pure-control-group">
+            <label></label>
+            @if (Model.Mode == EditPageMode.Create)
+            {
+                <input type="submit" value="新 增" class="pure-button" />
+            }
+            else if (Model.Mode == EditPageMode.Update)
+            {
+                <input type="submit" value="修 改" class="pure-button" />
+            }
+           
+        </div>
+	</fieldset>
+}

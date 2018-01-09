@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sample_dbModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="T_Account">
+      <EntityTypeMapping TypeName="sample_dbModel.T_Account">
+        <MappingFragment StoreEntitySet="T_Account">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Account_Role_Mapping">
+      <EntityTypeMapping TypeName="sample_dbModel.T_Account_Role_Mapping">
+        <MappingFragment StoreEntitySet="T_Account_Role_Mapping">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Permission">
+      <EntityTypeMapping TypeName="sample_dbModel.T_Permission">
+        <MappingFragment StoreEntitySet="T_Permission">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="UpdateUserId" ColumnName="UpdateUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Role">
+      <EntityTypeMapping TypeName="sample_dbModel.T_Role">
+        <MappingFragment StoreEntitySet="T_Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="UpdateUserId" ColumnName="UpdateUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Role_Permission_Mapping">
+      <EntityTypeMapping TypeName="sample_dbModel.T_Role_Permission_Mapping">
+        <MappingFragment StoreEntitySet="T_Role_Permission_Mapping">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="important_link">
+      <EntityTypeMapping TypeName="sample_dbModel.important_link">
+        <MappingFragment StoreEntitySet="important_link">
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="banner_img" ColumnName="banner_img" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="news_bulletin_info">
+      <EntityTypeMapping TypeName="sample_dbModel.news_bulletin_info">
+        <MappingFragment StoreEntitySet="news_bulletin_info">
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="blog" ColumnName="blog" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="new_bulletin_id" ColumnName="new_bulletin_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="related_file_download_info">
+      <EntityTypeMapping TypeName="sample_dbModel.related_file_download_info">
+        <MappingFragment StoreEntitySet="related_file_download_info">
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="sub_no" ColumnName="sub_no" />
+          <ScalarProperty Name="sub_title" ColumnName="sub_title" />
+          <ScalarProperty Name="sub_file" ColumnName="sub_file" />
+          <ScalarProperty Name="related_file_download_id" ColumnName="related_file_download_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="news_bulletin">
+      <EntityTypeMapping TypeName="sample_dbModel.news_bulletin">
+        <MappingFragment StoreEntitySet="news_bulletin">
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fixed_pollution_control">
+      <EntityTypeMapping TypeName="sample_dbModel.fixed_pollution_control">
+        <MappingFragment StoreEntitySet="fixed_pollution_control">
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fixed_pollution_control_in">
+      <EntityTypeMapping TypeName="sample_dbModel.fixed_pollution_control_in">
+        <MappingFragment StoreEntitySet="fixed_pollution_control_in">
+          <ScalarProperty Name="fixed_pollution_control_id" ColumnName="fixed_pollution_control_id" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fixed_pollution_control_info">
+      <EntityTypeMapping TypeName="sample_dbModel.fixed_pollution_control_info">
+        <MappingFragment StoreEntitySet="fixed_pollution_control_info">
+          <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+          <ScalarProperty Name="inid" ColumnName="inid" />
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="blog" ColumnName="blog" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="fixed_pollution_control_id" ColumnName="fixed_pollution_control_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="related_file_download">
+      <EntityTypeMapping TypeName="sample_dbModel.related_file_download">
+        <MappingFragment StoreEntitySet="related_file_download">
+          <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="category_download" ColumnName="category_download" />
+          <ScalarProperty Name="category_title" ColumnName="category_title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="system_link">
+      <EntityTypeMapping TypeName="sample_dbModel.system_link">
+        <MappingFragment StoreEntitySet="system_link">
+          <ScalarProperty Name="orderfield" ColumnName="orderfield" />
+          <ScalarProperty Name="create_time" ColumnName="create_time" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

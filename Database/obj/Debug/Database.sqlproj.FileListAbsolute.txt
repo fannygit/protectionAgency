@@ -1,0 +1,77 @@
+E:\!Project_JamZooWork\!GitJamZooWork\101\git\WebSite\Database\bin\Debug\Database.dacpac
+E:\!Project_JamZooWork\!GitJamZooWork\101\git\WebSite\Database\bin\Debug\Database.dll
+E:\!Project_JamZooWork\!GitJamZooWork\101\git\WebSite\Database\bin\Debug\Database.pdb
+E:\!Project_JamZooWork\!GitJamZooWork\101\git\WebSite\Database\obj\Debug\Database.dll
+E:\!Project_JamZooWork\!GitJamZooWork\101\git\WebSite\Database\obj\Debug\Database.pdb
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\bin\Debug\Database.dacpac
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\bin\Debug\Database.dll
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\bin\Debug\Database.pdb
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\obj\Debug\Database.dll
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\obj\Debug\Database.pdb
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\obj\Debug\Model.xml
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\obj\Debug\refactor.xml
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\obj\Debug\postdeploy.sql
+E:\!Project_JamZooWork\!GitJamZooWork\EZBUY\WebSite\Database\obj\Debug\predeploy.sql
+E:\!Project_JamZooWork\後台公版\WebSite\Database\bin\Debug\Database.dacpac
+E:\!Project_JamZooWork\後台公版\WebSite\Database\bin\Debug\Database.dll
+E:\!Project_JamZooWork\後台公版\WebSite\Database\bin\Debug\Database.pdb
+E:\!Project_JamZooWork\後台公版\WebSite\Database\obj\Debug\Database.dll
+E:\!Project_JamZooWork\後台公版\WebSite\Database\obj\Debug\Database.pdb
+E:\!Project_JamZooWork\後台公版\WebSite\Database\obj\Debug\Model.xml
+E:\!Project_JamZooWork\後台公版\WebSite\Database\obj\Debug\refactor.xml
+E:\!Project_JamZooWork\後台公版\WebSite\Database\obj\Debug\postdeploy.sql
+E:\!Project_JamZooWork\後台公版\WebSite\Database\obj\Debug\predeploy.sql
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\bin\Debug\Database.dacpac
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\bin\Debug\Database.dll
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\bin\Debug\Database.pdb
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\obj\Debug\Database.dll
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\obj\Debug\Database.pdb
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\obj\Debug\Model.xml
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\obj\Debug\refactor.xml
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\obj\Debug\postdeploy.sql
+E:\!Project_JamZooWork\後台公版\WebSite - 45\Database\obj\Debug\predeploy.sql
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\bin\Debug\Database.dacpac
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\bin\Debug\Database.dll
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\bin\Debug\Database.pdb
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\obj\Debug\Model.xml
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\obj\Debug\refactor.xml
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\obj\Debug\postdeploy.sql
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\obj\Debug\predeploy.sql
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\obj\Debug\Database.dll
+E:\!SOHO\Protection-Agency\WebSite - 45\Database\obj\Debug\Database.pdb
+D:\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dacpac
+D:\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dll
+D:\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.pdb
+D:\WebSite - 45\WebSite - 45\Database\obj\Debug\Model.xml
+D:\WebSite - 45\WebSite - 45\Database\obj\Debug\refactor.xml
+D:\WebSite - 45\WebSite - 45\Database\obj\Debug\postdeploy.sql
+D:\WebSite - 45\WebSite - 45\Database\obj\Debug\predeploy.sql
+D:\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.dll
+D:\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.pdb
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dacpac
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dll
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.pdb
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Model.xml
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\refactor.xml
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\postdeploy.sql
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\predeploy.sql
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.dll
+E:\!SOHO\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.pdb
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dacpac
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dll
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.pdb
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.dll
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.pdb
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Model.xml
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\refactor.xml
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\postdeploy.sql
+E:\!SOHO\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\predeploy.sql
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dacpac
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.dll
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\bin\Debug\Database.pdb
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.dll
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Database.pdb
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\Model.xml
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\refactor.xml
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\postdeploy.sql
+D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\predeploy.sql

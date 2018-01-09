@@ -1,0 +1,117 @@
+﻿@model EPA.Project.WebSite.ViewModels.LoginPage
+@using EPA.Project.WebSite.Enums;
+@using EPA.Project.WebSite.Library;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://design.jamcasa.com.tw/ -->
+<html lang="en" class="wf-proximanova-n1-active wf-proximanova-n4-active wf-proximanova-n7-active wf-omnespro-n2-active wf-omnespro-n3-active wf-active">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPA</title>
+   <link rel="stylesheet" href="@Url.Content("~/Content/mng.css")" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css" />
+    @*<link href="@Url.Content("~/Content/jquery-ui-1.7.2.custom.css")" rel="stylesheet" type="text/css" />*@
+    <style type="text/css">
+        .field-validation-error
+        {
+            color:rgb(223, 117, 20);
+        }
+        select { height:auto; } 
+    </style>
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+</head>
+<body onload="javascript:document.forms[0].Account.focus();">
+    <div id="wrap">
+        <div id="top">
+            <div id="logo">
+@*                <img src="@Url.Content("~/Content/Images/jamcasa_logo.jpg")" alt="">*@
+            </div>
+
+        </div>
+        @using (Html.BeginForm("Login", "Account", null, FormMethod.Post, new { @class = "pure-form pure-form-aligned" }))
+        {
+            <script language="javascript" type="text/javascript">
+                function checkdata() {
+                    document.forms[0].submit();
+                }
+
+                $(function () {
+                    checkddl($('#AccountType').val());
+                    $('#AccountType').bind('change', function () {
+                        checkddl($(this).val());
+                    });
+                });
+
+                function checkddl(_val) {
+                    if (_val == 'ActiveDirectory') {
+                        $('#Domain').show();
+                    }
+                    else{
+                        $('#Domain').hide();
+                    }
+                }
+            </script>
+            <div id="index">
+                <div id="login">
+                    <table border="0" cellpadding="0" cellspacing="0" class="loginTable" style="width:300px; margin-left:50px">
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class="title">
+                                    @Html.ValidationMessage("message")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item">
+                                    <img src="@Url.Content("~/Content/Images/login_t1_1.gif")" alt="帳號" /></td>
+                                <td>
+                                    @Html.TextBoxFor(p => p.Account, new { @class = "pure-input-1-1" })
+                                    @Html.ValidationMessageFor(p => p.Account)
+                                </td>
+                            </tr>
+                           
+                            <tr>
+                                <td class="item">
+                                    <img src="@Url.Content("~/Content/Images/login_t1_2.gif")" alt="密碼"></td>
+                                <td>
+                                    @Html.PasswordFor(p => p.Password, new { @class = "pure-input-1-1" })
+                                    @Html.ValidationMessageFor(p => p.Password) 
+                                </td>
+                            </tr>
+                            @*<tr>
+                                <td colspan="2" class="title">
+                                @if (!ViewContext.ViewData.ModelState.IsValid)
+                                {
+                                    if (ViewContext.ViewData.ModelState.Keys.Contains("message"))
+                                    {
+                                        <div class="alert">
+                                            @Html.ValidationMessage("message")
+                                        </div>
+                                    }
+                                }
+                                </td>
+                            </tr>*@
+                            <tr>
+                                <td class="item">
+                                </td>
+                                <td>
+                                    <input type="submit" value="登入" class="pure-button" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    </div>
+    <div id="footer">
+        <div id="copyright">© 2017 EPA Corporation All Right Reserved @typeof(EPA.Project.WebSite.Controllers.AccountController).Assembly.GetName().Version.ToString(3)rc <a href="https://air.epa.gov.tw/Stationary/RB_main.aspx" target="_blank">https://air.epa.gov.tw/Stationary/RB_main.aspx</a></div>
+    </div>
+</body>
+</html>

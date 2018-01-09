@@ -1,0 +1,89 @@
+﻿@using EPA.Project.WebSite.Enums;
+@using EPA.Project.WebSite.Library;
+@using System.Web.Script.Serialization;
+@model EPA.Project.WebSite.Models.AccountModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string CurrentController = string.Empty;
+    if (ViewContext.RouteData.Values["Controller"] != null)
+    {
+        CurrentController = ViewContext.RouteData.Values["Controller"].ToString();
+    }
+}
+<script type="text/javascript">
+
+    function Check() {
+        if ($('select[name="Role"]').val() == "") {
+            alert("角色不得選擇空白項目")
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+</script>
+@*@Html.ActionLink("回上頁", "List", new { page = Model.page }, new { @class = "pure-button" })*@
+<p>
+    @Html.ValidationMessage("message")
+</p>
+@using (Html.BeginForm(Model.Mode == EditPageMode.Create ? "create" : "update",
+    CurrentController, new { page = Model.page }, FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "pure-form pure-form-aligned" }))
+{
+    @Html.HiddenFor(p => p.Id)
+    <fieldset>
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.Account)
+            @Html.TextBoxFor(p => p.Account)
+            @Html.ValidationMessageFor(p => p.Account)
+        </div>
+
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.Password)
+            @Html.PasswordFor(p => p.Password)
+            @Html.ValidationMessageFor(p => p.Password)
+            @Html.PasswordFor(p => p.RePassword)
+            @Html.ValidationMessageFor(p => p.RePassword)
+
+        </div>
+
+        @*<div class="pure-control-group">
+            @Html.LabelFor(p => p.Role)
+            @Html.DropDownListFor(p => p.Role, Model.RoleDropDownList, new { @class = "pure-input-small" })
+        </div>
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.Status)
+            <label for="Status" class="pure-radio">
+                @Html.RadioButtonFor(p => p.Status, "1") 啟用&nbsp;
+                @Html.RadioButtonFor(p => p.Status, "0") 停用&nbsp;
+            </label>
+            @Html.ValidationMessageFor(p => p.Status)
+        </div>*@
+        <div class="pure-control-group">
+            @Html.LabelFor(p => p.CreateDate)
+            @Model.CreateDate
+            @Html.HiddenFor(p => p.CreateDate)
+        </div>
+
+        @*@if (Model.LastLoginTime.HasValue)
+        {
+            <div class="pure-control-group">
+                @Html.LabelFor(p => p.LastLoginTime)
+                @Model.LastLoginTime
+            </div>
+        }*@
+
+        <div class="pure-control-group">
+            <label></label>
+            @if (Model.Mode == EditPageMode.Create)
+            {
+                <input type="submit" value="新 增" class="pure-button"/>
+            }
+            else if (Model.Mode == EditPageMode.Update)
+            {
+                <input type="submit" value="修 改" class="pure-button" onclick="return Check()" />
+            }
+
+        </div>
+    </fieldset>
+}
