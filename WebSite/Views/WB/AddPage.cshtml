@@ -9,7 +9,7 @@
     <!--cntnav end-->
     <!--content -->
     <div class="content" id="contentText">
-        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 各類管制與申報系統<span> <a href="@Url.Action("AddPage")" accesskey="u" title="上方資訊導盲磚">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 各類管制與申報系統 </span></h1>
+        <h2><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 各類管制與申報系統<span> <a href="@Url.Action("AddPage")" accesskey="u" title="上方資訊導盲磚">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 各類管制與申報系統 </span></h2>
         <div class="datetab">
             <br>
             <div class="scroll tab400">
@@ -19,13 +19,38 @@
                             <th width="35%" nowrap scope="b">標題</th>
                             <th width="65%" scope="b">連結</th>
                         </tr>
-                        @foreach (var item in Model.SystemLinkLists)
-                        {
-                            <tr>
-                                <td scope="a"><div align="left">@item.Title</div></td>
-                                <td scope="c"><div align="left"><a href="@item.Url" target="_blank" title="@item.Title">@item.Url</a></div></td>
-                            </tr>
-                        }
+                        <tr>
+                            <td scope="a"><div align="left">總量管制制度</div></td>
+                            <td scope="c"><div align="left"><a href="http://tqcontrol.estc.tw/" target="_blank" title="總量管制制度">http://tqcontrol.estc.tw/</a></div></td>
+                        </tr>
+                        <tr>
+                            <td scope="a"><div align="left">固定污染源管理資訊系統</div></td>
+                            <td scope="c"><div align="left"><a href="https://apmis.epa.gov.tw" target="_blank" title="固定污染源管理資訊系統">https://apmis.epa.gov.tw</a></div></td>
+                        </tr>
+                        <tr>
+                            <td scope="a"><div align="left">空氣污染費網路申報及查詢系統</div></td>
+                            <td scope="c"><div align="left"><a href="https://air10.epa.gov.tw/" target="_blank" title="空氣污染費網路申報及查詢系統">https://air10.epa.gov.tw/</a></div></td>
+                        </tr>
+                        <tr>
+                            <td scope="a"><div align="left">營建工程污染管制及收費管理系統</div></td>
+                            <td scope="c"><div align="left"><a href="https://epaconsweb.epa.gov.tw/AccountEPAConsWeb/LoginEPAConsWeb.aspx?ReturnUrl=%2f" target="_blank" title="營建工程污染管制及收費管理系統">https://epaconsweb.epa.gov.tw/AccountEPAConsWeb/LoginEPAConsWeb.aspx?ReturnUrl=%2f</a></div></td>
+                        </tr>
+                        <tr>
+                            <td scope="a"><div align="left">空氣污染費網路申報及查詢系統</div></td>
+                            <td scope="c"><div align="left"><a href="https://air10.epa.gov.tw/" target="_blank" title="空氣污染費網路申報及查詢系統">https://air10.epa.gov.tw/</a></div></td>
+                        </tr>
+                        <tr>
+                            <td scope="a"><div align="left">逸散性粒狀污染物管制</div></td>
+                            <td scope="c"><div align="left"><a href="http://a0-empncet-ap.epa.gov.tw/dispPageBox/EmpHP.aspx?ddsPageID=HP" target="_blank" title="逸散性粒狀污染物管制">http://a0-empncet-ap.epa.gov.tw/dispPageBox/EmpHP.aspx?ddsPageID=HP</a></div></td>
+                        </tr>
+                        <tr>
+                            <td scope="a"><div align="left">自動連續監測CEMS</div></td>
+                            <td scope="c"><div align="left"><a href="https://cems.epa.gov.tw/CemsFacReport/" target="_blank" title="自動連續監測CEMS">https://cems.epa.gov.tw/CemsFacReport/</a></div></td>
+                        </tr>
+                        <tr>
+                            <td scope="a"><div align="left">重大空氣污染事件應變處理查詢系統</div></td>
+                            <td scope="c"><div align="left"><a href="http://aers.epa.gov.tw/" target="_blank" title="重大空氣污染事件應變處理查詢系統">http://aers.epa.gov.tw/</a></div></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

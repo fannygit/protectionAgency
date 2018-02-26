@@ -8,17 +8,17 @@
     <!--cntnav -->
 
     <div class="cntnav n1" id="contentText">
-        <p>最新公告</p><a href="@Url.Action("newslist")" accesskey="L" title="左方導覽區塊">:::　</a>
+        <p><a href="@Url.Action("newslist")" accesskey="L" title="左方導覽區塊" class="dooo">:::　</a>最新公告</p>
         <ul style="list-style:none;" class="cntmenu">
             @foreach (var item in Model.NewsBulletinList)
             {
                 if (item.IsUrl)
                 {
-                    <li><a href="@item.Url" target="_blank" title="@item.Text" class="@(item.Value.ToString() == Model.new_bulletin_id ? "cntok" : "")"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Text</a></li>
+                    <li><a href="@item.Url" target="_blank" title="@item.Text（另開視窗）" class="@(item.Value.ToString() == Model.new_bulletin_id ? "cntok" : "")"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Text</a></li>
                 }
                 else
                 {
-                    <li><a href="@Url.Action("newslist", new { new_bulletin_id = item.Value })" title="@item.Text" class="@(item.Value.ToString() == Model.new_bulletin_id ? "cntok" : "")"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Text</a></li>
+                    <li><a href="@Url.Action("newslist", new { new_bulletin_id = item.Value })" title="@item.Text（另開視窗）" class="@(item.Value.ToString() == Model.new_bulletin_id ? "cntok" : "")"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Text</a></li>
                 }
             }
             @*
@@ -30,7 +30,7 @@
     <!--cntnav end-->
     <!--content -->
     <div class="content" id="contentText">
-        <h1>
+        <h2>
         <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 
         @Model.NewsTitle
         <span> 
@@ -38,7 +38,7 @@
             <a href="@Url.Action("Index")" title="首頁"> <i class="fa fa-home" aria-hidden="true"></i>首頁</a>
              &gt; 最新公告 &gt; @Model.NewsTitle
          </span>
-        </h1>
+        </h2>
         <div class="datetab">
             <div class="scroll tab400">
                 <div class="nword">

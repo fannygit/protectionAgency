@@ -39,5 +39,5 @@ CKEDITOR.editorConfig = function( config ) {
 	config.extraPlugins = 'image';
 	config.filebrowserImageUploadUrl = "/File/Upload";
 
-	config.extraPlugins = 'justify,indent,indentblock,showborders';
+	config.extraPlugins = 'justify,indent,indentblock';
 };

@@ -7,7 +7,7 @@
     <!--cntnav -->
 
     <div class="cntnav n1">
-        <p>下載文件專區</p><a href="@Url.Action("download")" accesskey="L" title="左方導覽區塊">:::　</a>
+        <p><a href="@Url.Action("download")" accesskey="L" title="左方導覽區塊" class="dooo">:::　</a>下載文件專區</p>
         <ul style="list-style:none;" class="cntmenu">
             @foreach (var item in Model.RelatedFileDownloadList)
             {
@@ -21,7 +21,7 @@
     <!--cntnav end-->
     <!--content -->
     <div class="content">
-        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 下載文件專區<span> <a href="#" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 下載文件專區 </span></h1>
+        <h2><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 下載文件專區<span> <a href="#" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 下載文件專區 </span></h2>
         <div class="datetab">
             <div class="scroll tab400">
                 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" summary="影像區編排表格">
@@ -37,7 +37,7 @@
                                 <td scope="d">
                                     <div align="center" style="width:100px">@i.CreateTime.ToString("yyyy/MM/dd")</div>
                                 </td>
-                                <td scope="a"><div align="left"><a href="@Url.Content("~/File/Get?FileId=" + i.SubFile)" title="@i.SubTitle">@i.SubTitle</a></div></td>
+                                <td scope="a"><div align="left">@i.SubTitle</div></td>
                                 <td align="center" scope="c"><a href="@Url.Content("~/File/Get?FileId=" + i.SubFile)" title="@i.SubTitle" class="gdown"><i class="fa fa-cloud-download " aria-hidden="true"></i> </a></td>
                             </tr>
                         }                        

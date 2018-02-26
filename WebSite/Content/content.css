@@ -94,15 +94,15 @@ ul.nav {
 	background-repeat: no-repeat;
 	text-align:center;
 	padding:7px 0 7px 0;
-	font-size:0.938em;
+	font-size:11pt;
 	color: #000000;
 }
 .nav a:link, a:visited {
-	font-size:0.688em;
+	font-size: 11px;
 	color: #666;
 	text-decoration: none;}
 .nav a:hover {
-	font-size:0.688em;
+	font-size: 11px;
 	color: #000000;
 	text-decoration: none;}
 

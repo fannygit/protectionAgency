@@ -44,7 +44,7 @@
             @Html.LabelFor(p => p.Img)
             @if (!string.IsNullOrEmpty(Model.Img))
             {
-                <a id="imgA" href="@Url.Content("~/File/Get?FileId=" + Model.Img)" target="_blank">
+                <a id="imgA" href="@Url.Content("~/File/Get?FileId=" + Model.Img)" target="_blank" title="@Model.Title">
                     <img id="img1" style="width:100px;" src="@Url.Content("~/File/Get?FileId=" + Model.Img)" />
                 </a>
             }

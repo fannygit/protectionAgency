@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 .dropdown .dropdown-menu1 {
 }
 .dropdown .dropdown-menu1 li {
@@ -30,7 +31,7 @@
 .cntmenu li{  }
 .cntmenu li a{ color:#FFF; padding:8px 5px 8px 25px; display:block;}
 .cntmenu li:hover{ background:#393}
-.cntok { background:#393}
+.cntok { background: #00730F}
 
 .rightbtn {  display:inline-block;  zoom:1;*display: inline;_height: 30px; width:120px; margin:0 0 20px 0; vertical-align:top; text-align: center}
 
@@ -45,10 +46,10 @@
 
 
 .content { vertical-align:top; background:#FFF; display:inline-block; zoom:1;*display: inline;_height: 30px; width:78%; padding:0px 15px 20px 15px; margin:0 0 0 10px;  }
-.content h1 { position:relative; color:#259f94; font-size:1.563em; font-weight: bold;   border-bottom:1px solid #EEE; padding:4px 8px; background:#FFF;  }
-.content h1 span { position:absolute; font-size:0.500em; color:#959595; right:15px; top:10px }
-.content h1 a { color:#666; }
-.content h1 a:hover { color:#0adaae; }
+.content h2 { position:relative; color:#259f94; font-size:1.563em; font-weight: bold;   border-bottom:1px solid #EEE; padding:4px 8px; background:#FFF;  }
+.content h2 span { position:absolute; font-size:0.500em; color:#959595; right:15px; top:10px }
+.content h2 a { color:#666; }
+.content h2 a:hover { color:#0adaae; }
 
 .gdown { display:block; background: #093; padding:5px; width:25px;  text-align:right; border-radius :99px;}
 .gdown i { color:#FFF; font-size:1.438em;}
@@ -178,12 +179,12 @@ border-radius: 8px ; width:100%; padding:8px 0; font-family:"微軟正黑體"; c
           border-radius:15px;  }
 .contbtn li a:hover { background:#0adaae; color:#FFF;}
 .con{ color:#999; background:#EBEBEB }
-.conb {background:#0adaae; color:#FFF;}
+.conb {background: #4AA6A8; color:#FFF;}
 
-.kbtn { background:#6C6; display:block;  padding:5px 0 5px 35px;  color:#FF9;}
-.kbtn:hover{ background: #87d373; display:block; color: #FFF;}
-.kbtnb {background: #87d373; display:block;  padding:5px 0 5px 35px;  color: #FFF;}
-.icons { font-size:0.500em;}
+.kbtn { background: #393; display:block;  padding:5px 0 5px 35px;  color:#FF9;}
+.kbtn:hover{ background: #393; display:block; color: #FFF;}
+.kbtnb {background: #393; display:block;  padding:5px 0 5px 35px;  color: #FFF;}
+.icons { font-size:8px;}
 
 
 .fabg { background:#3fdac5;}
@@ -224,11 +225,11 @@ border-radius: 8px ; width:100%; padding:8px 0; font-family:"微軟正黑體"; c
 .photo ul li:hover p{ color:#F90;  }
 .photo ul li:hover img{ opacity:1; filter:alpha(opacity=100);  }
 
-.newinfo h2{ position:relative; background:url(../img/green-ball.png) left no-repeat ; color:#093; font-size:1.125em; padding:10px 70px 10px 30px;  }
-.newinfo h2 span a{ position:absolute; right:-0px; background: url(../img/fb_icon.png) no-repeat; background-size:100%; text-indent:-9999px; width:70px; height:27px; display:block; top:10px; }
-.newinfo h2 p a{ position:absolute; right:-0px;  width:70px; padding:5px;  display:block; top:10px; }
-.newinfo h3{ text-align:right; background:none; border-bottom:1px solid #ECECEC; color: #666; font-size:0.938em; line-height:25px; padding:10px 10px 10px 10px;  }
-.newinfo h3 span { font-weight:bold; color:#099; background:url(../img/r.png) left no-repeat; padding:0 0 0 20px;}
+.newinfo h3{ position:relative; background:url(../img/green-ball.png) left no-repeat ; color:#093; font-size:1.125em; padding:10px 70px 10px 30px;  }
+.newinfo h3 span a{ position:absolute; right:-0px; background: url(../img/fb_icon.png) no-repeat; background-size:100%; text-indent:-9999px; width:70px; height:27px; display:block; top:10px; }
+.newinfo h3 p a{ position:absolute; right:-0px;  width:70px; padding:5px;  display:block; top:10px; }
+.newinfo h4{ text-align:right; background:none; border-bottom:1px solid #ECECEC; color: #666; font-size:0.938em; line-height:25px; padding:10px 10px 10px 10px;  }
+.newinfo h4 span { font-weight:bold; color:#099; background:url(../img/r.png) left no-repeat; padding:0 0 0 20px;}
 .newword { padding:20px; min-height:300px; }
 .rbtn a { color:#FFF; text-decoration:none;}
 .infolink { border:3px solid #F2F2F2; color: #666;  line-height:25px; padding:10px 10px 10px 10px; }

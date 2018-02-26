@@ -6,7 +6,7 @@
     <!--cntnav -->
 
     <div class="cntnav n1">
-        <p>@Model.FixedPollutionControlInfo.CategoryTitle</p><a href="#" accesskey="L" title="左方導覽區塊">:::　</a>
+        <p><a href="#" accesskey="L" title="左方導覽區塊" class="dooo">:::</a>@Model.FixedPollutionControlInfo.CategoryTitle</p>
         <ul style="list-style:none;" class="cntmenu">
             @foreach (var item in Model.FixedPollutionControlInList)
             {
@@ -29,7 +29,7 @@
     <!--cntnav end-->
     <!--content -->
     <div class="content" id="contentText">
-        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Model.FixedPollutionControlInfo.CategoryTitleIN<span> <a href="#" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 固定污染源管制 &gt; @Model.FixedPollutionControlInfo.CategoryTitle &gt; @Model.FixedPollutionControlInfo.CategoryTitleIN</span></h1>
+        <h2><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Model.FixedPollutionControlInfo.CategoryTitleIN<span> <a href="#" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 固定污染源管制 &gt; @Model.FixedPollutionControlInfo.CategoryTitle &gt; @Model.FixedPollutionControlInfo.CategoryTitleIN</span></h2>
         <div class="contbtn">
             <ul style="list-style:none;">
                 @foreach (var i in Model.FixedPollutionControlInfoList)
@@ -39,6 +39,7 @@
             </ul>
         </div>
         <div class="word">
+
             @if(!string.IsNullOrEmpty(Model.FixedPollutionControlInfo.Blog))
             {
                 @Html.Raw(Model.FixedPollutionControlInfo.Blog)

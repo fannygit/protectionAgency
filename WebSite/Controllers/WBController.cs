@@ -29,6 +29,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.ImportantLinkLists = Servcie.GetImportantLinks(m.Skip, m.Take, out totalRecords);
             m.TotalRecords = totalRecords;
 
+            TempData["title"] = "首頁";
             return View(m);
         }
 
@@ -41,6 +42,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsInfo = Servcie.GetNesInfo(info_id);
             m.SystemLinkLists = Servcie.GetSystemLinkLists();
 
+            TempData["title"] = "最新公告-"+m.NewsInfo.Title;
             return View(m);
         }
 
@@ -59,6 +61,8 @@ namespace JamZoo.Project.WebSite.Controllers
 
             m.NewsTitle = Servcie.GetNesTitle(new_bulletin_id);
             m.new_bulletin_id = new_bulletin_id;
+
+            TempData["title"] = "最新公告-" + m.NewsTitle;
             return View(m);
         }
 
@@ -77,6 +81,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.TotalRecords = totalRecords;
 
             m.download_id = download_id;
+            TempData["title"] = "下載文件專區-"+ m.RelatedFileDownloadList.Where(p=>p.Value== download_id).LastOrDefault().Text;
             return View(m);
         }
 
@@ -94,6 +99,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.ImportantLinkLists = Servcie.GetImportantLinks(m.Skip, m.Take, out totalRecords);
             m.TotalRecords = totalRecords;
 
+            TempData["title"] = "重要連結";
             return View(m);
         }
 
@@ -105,6 +111,8 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsBulletinList = Servcie.GetNewsBulletinList();
             m.RelatedFileDownloadList = Servcie.GetRelatedFileDownloadList();
             m.SystemLinkLists = Servcie.GetSystemLinkLists();
+
+            TempData["title"] = "各類管制與申報系統";
             return View(m);
         }
 
@@ -116,6 +124,8 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsBulletinList = Servcie.GetNewsBulletinList();
             m.RelatedFileDownloadList = Servcie.GetRelatedFileDownloadList();
             m.SystemLinkLists = Servcie.GetSystemLinkLists();
+
+            TempData["title"] = "相關法規與公告查詢";
             return View(m);
         }
 
@@ -158,6 +168,22 @@ namespace JamZoo.Project.WebSite.Controllers
             m.f2 = f2;
             m.f3 = f3;
 
+            if (!string.IsNullOrEmpty(f3) && !string.IsNullOrEmpty(f2) && !string.IsNullOrEmpty(f1))
+            {
+                TempData["title"] = m.FixedPollutionControlInfo.CategoryTitle + "-" +
+                                m.FixedPollutionControlInfo.CategoryTitleIN + "-" + m.FixedPollutionControlInfo.Title;
+            }
+            else if (!string.IsNullOrEmpty(f2) && !string.IsNullOrEmpty(f1))
+            {
+                var f2list = m.FixedPollutionList.Where(p => p.Key.Value == f1).FirstOrDefault().Value;
+                TempData["title"] = f2list.Where(p => p.Key == fd2).FirstOrDefault().Value;
+            }
+            else if (!string.IsNullOrEmpty(f1))
+            {
+                TempData["title"] = m.FixedPollutionList.Where(p => p.Key.Value == f1).FirstOrDefault().Key.Text;
+            }
+
+            
             return View(m);
         }
 
@@ -168,6 +194,8 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsBulletinList = Servcie.GetNewsBulletinList();
             m.RelatedFileDownloadList = Servcie.GetRelatedFileDownloadList();
             m.SystemLinkLists = Servcie.GetSystemLinkLists();
+
+            TempData["title"] = "網站導覽";
             return View(m);
         }
 
@@ -178,6 +206,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsBulletinList = Servcie.GetNewsBulletinList();
             m.RelatedFileDownloadList = Servcie.GetRelatedFileDownloadList();
             m.SystemLinkLists = Servcie.GetSystemLinkLists();
+            TempData["title"] = "網站資料開放宣告";
             return View(m);
         }
 
@@ -188,6 +217,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsBulletinList = Servcie.GetNewsBulletinList();
             m.RelatedFileDownloadList = Servcie.GetRelatedFileDownloadList();
             m.SystemLinkLists = Servcie.GetSystemLinkLists();
+            TempData["title"] = "隱私權保護政策";
             return View(m);
         }
 
@@ -198,6 +228,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsBulletinList = Servcie.GetNewsBulletinList();
             m.RelatedFileDownloadList = Servcie.GetRelatedFileDownloadList();
             m.SystemLinkLists = Servcie.GetSystemLinkLists();
+            TempData["title"] = "網站安全政策";
             return View(m);
         }
     }
