@@ -32,11 +32,11 @@ namespace EPA.Project.WebSite.Controllers
 
         public ActionResult Cp(string a, string p)
         {
-            if (string.IsNullOrEmpty(p))
-                p = "zxcv1234";
             if (string.IsNullOrEmpty(a))
-                a = "zxcv1234";
-            return Content(Service.ChangePassword(a,p) ? "成功" : "失敗");
+                a = "epa";
+            if (string.IsNullOrEmpty(a))
+                p = "zxcv1234";
+            return Content(Service.ChangePassword(a, p));
         }
 
 

@@ -81,7 +81,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.TotalRecords = totalRecords;
 
             m.download_id = download_id;
-            TempData["title"] = "下載文件專區-"+ m.RelatedFileDownloadList.Where(p=>p.Value== download_id).LastOrDefault().Text;
+            TempData["title"] = m.RelatedFileDownloadList.Where(p=>p.Value== download_id).LastOrDefault().Text;
             return View(m);
         }
 

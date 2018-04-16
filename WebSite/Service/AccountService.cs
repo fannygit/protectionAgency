@@ -172,7 +172,7 @@ namespace EPA.Project.WebSite.Service
             return ErrMsgs.Length == 0;
         }
 
-        public bool ChangePassword(string account, string password)
+        public string ChangePassword(string account, string password)
         {
             var dbEntity = (from p in basedb.T_Account
                             where p.Account == account
@@ -180,21 +180,21 @@ namespace EPA.Project.WebSite.Service
 
             if (dbEntity != null)
             {
-                dbEntity.Password = Utils.ToHash256(password, null);
-                basedb.T_Account.Add(dbEntity);
-
                 try
                 {
-
-                    if (basedb.SaveChanges() > 0)
-                        return true;
+                    dbEntity.Password = Utils.ToHash256(password, null);
+                    basedb.SaveChanges();
                 }
                 catch (Exception ex)
                 {
-                    return false;
+                    return "失敗原因:"+ex.Message;
                 }
             }
-            return false;
+            else
+            {
+                return "找不到帳號";
+            }
+            return "成功";
         }
 
         public AccountModel GetByAccount(string Account)
