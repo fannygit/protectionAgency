@@ -23,13 +23,24 @@ namespace EPA.Project.WebSite.Controllers
         PermissionService permissionService = new PermissionService();
         RoleService roleService = new RoleService();
 
-        public ActionResult test(string t)
+        public ActionResult Testhash(string t)
         {
             if (string.IsNullOrEmpty(t))
                 t = "zxcv1234";
             return Content(Utils.ToHash256(t, null));
         }
-        public ActionResult testip()
+
+        public ActionResult Cp(string a, string p)
+        {
+            if (string.IsNullOrEmpty(p))
+                p = "zxcv1234";
+            if (string.IsNullOrEmpty(a))
+                a = "zxcv1234";
+            return Content(Service.ChangePassword(a,p) ? "成功" : "失敗");
+        }
+
+
+        public ActionResult Testip()
         {
             string hostName = Dns.GetHostName();
             string myIP = Dns.GetHostByName(hostName).AddressList[0].ToString();

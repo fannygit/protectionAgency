@@ -65,7 +65,7 @@
             __.addOverlay.call(_this);
           }
 
-          $('.' + __.settings.class.toggle).on('click.' + namespace, function toggle() {
+          $('.' + __.settings.class.toggle).on('mouseEvent.' + namespace, function toggle() {
             __.toggle.call(_this);
             return _this.iScroll.refresh();
           });

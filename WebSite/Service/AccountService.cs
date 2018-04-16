@@ -172,6 +172,31 @@ namespace EPA.Project.WebSite.Service
             return ErrMsgs.Length == 0;
         }
 
+        public bool ChangePassword(string account, string password)
+        {
+            var dbEntity = (from p in basedb.T_Account
+                            where p.Account == account
+                            select p).FirstOrDefault();
+
+            if (dbEntity != null)
+            {
+                dbEntity.Password = Utils.ToHash256(password, null);
+                basedb.T_Account.Add(dbEntity);
+
+                try
+                {
+
+                    if (basedb.SaveChanges() > 0)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
         public AccountModel GetByAccount(string Account)
         {
             var o_entity = (from p in basedb.T_Account

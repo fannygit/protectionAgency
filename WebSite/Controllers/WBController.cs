@@ -29,7 +29,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.ImportantLinkLists = Servcie.GetImportantLinks(m.Skip, m.Take, out totalRecords);
             m.TotalRecords = totalRecords;
 
-            TempData["title"] = "首頁";
+            TempData["title"] = "行政院環境保護署固定污染源管制資訊網";
             return View(m);
         }
 
@@ -62,7 +62,7 @@ namespace JamZoo.Project.WebSite.Controllers
             m.NewsTitle = Servcie.GetNesTitle(new_bulletin_id);
             m.new_bulletin_id = new_bulletin_id;
 
-            TempData["title"] = "最新公告-" + m.NewsTitle;
+            TempData["title"] = m.NewsTitle;
             return View(m);
         }
 

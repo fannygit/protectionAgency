@@ -6,7 +6,7 @@
 <div class="contwar" id="contentText">
     <!--cntnav -->
     <div class="cntnav n1" id="contentText">
-        <p>最新公告</p><a href="#" accesskey="L" title="左方導覽區塊">:::　</a>
+        <p><a href="#" accesskey="L" title="左方導覽區塊" class="dooo">:::　</a>最新公告</p>
         <ul style="list-style:none;" class="cntmenu">
             @foreach (var item in Model.NewsBulletinList)
             {
@@ -17,10 +17,10 @@
     <!--cntnav end-->
     <!--content -->
     <div class="content" id="contentText">
-        <h1><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Model.NewsInfo.CategoryTitle<span> <a href="@Url.Action("newslist")" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 最新公告 &gt; @Model.NewsInfo.CategoryTitle</span></h1>
+        <h2><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Model.NewsInfo.CategoryTitle<span> <a href="@Url.Action("newslist")" accesskey="C" title="中央內容區塊">:::　</a><a href="@Url.Action("Index")" title="首頁"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> &gt; 最新公告 &gt; @Model.NewsInfo.CategoryTitle</span></h2>
         <div class="newinfo">
-            <h2>@Model.NewsInfo.Title</h2>
-            <h3><span> 發佈日期： </span>@Model.NewsInfo.CreateTime.ToString("yyyy/MM/dd")</h3>
+            <h3>@Model.NewsInfo.Title</h3>
+            <h4><span> 發佈日期： </span>@Model.NewsInfo.CreateTime.ToString("yyyy/MM/dd")</h4>
         </div>
         <div class="newword scroll">
            @Html.Raw(Model.NewsInfo.Blog)

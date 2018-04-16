@@ -75,3 +75,12 @@ D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\De
 D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\refactor.xml
 D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\postdeploy.sql
 D:\Protection-Agency\Protection-Agency\WebSite - 45\WebSite - 45\Database\obj\Debug\predeploy.sql
+D:\Protection-Agency\Database\bin\Debug\Database.dacpac
+D:\Protection-Agency\Database\bin\Debug\Database.dll
+D:\Protection-Agency\Database\bin\Debug\Database.pdb
+D:\Protection-Agency\Database\obj\Debug\Database.dll
+D:\Protection-Agency\Database\obj\Debug\Database.pdb
+D:\Protection-Agency\Database\obj\Debug\Model.xml
+D:\Protection-Agency\Database\obj\Debug\refactor.xml
+D:\Protection-Agency\Database\obj\Debug\postdeploy.sql
+D:\Protection-Agency\Database\obj\Debug\predeploy.sql

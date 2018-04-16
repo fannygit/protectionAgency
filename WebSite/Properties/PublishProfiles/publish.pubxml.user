@@ -151,7 +151,7 @@
       <publishTime>05/30/2015 17:48:06</publishTime>
     </File>
     <File Include="bin/WebSite.dll">
-      <publishTime>02/02/2018 14:40:00</publishTime>
+      <publishTime>04/16/2018 15:10:27</publishTime>
     </File>
     <File Include="bin/zh-Hant/EntityFramework.resources.dll">
       <publishTime>05/30/2015 17:48:08</publishTime>
@@ -199,7 +199,7 @@
       <publishTime>11/07/2017 00:30:40</publishTime>
     </File>
     <File Include="Content/ckeditor/config.js">
-      <publishTime>12/14/2017 18:54:38</publishTime>
+      <publishTime>11/30/2017 09:50:50</publishTime>
     </File>
     <File Include="Content/ckeditor/contents.css">
       <publishTime>11/07/2017 00:08:06</publishTime>
@@ -1858,16 +1858,16 @@
       <publishTime>09/20/2017 15:09:36</publishTime>
     </File>
     <File Include="Content/content.css">
-      <publishTime>11/06/2017 23:51:30</publishTime>
+      <publishTime>09/11/2017 15:37:58</publishTime>
     </File>
     <File Include="Content/css/content.css">
-      <publishTime>11/08/2017 05:37:38</publishTime>
+      <publishTime>02/22/2018 09:08:54</publishTime>
     </File>
     <File Include="Content/css/demo.css">
-      <publishTime>11/07/2017 00:24:06</publishTime>
+      <publishTime>02/21/2018 10:55:25</publishTime>
     </File>
     <File Include="Content/css/drawer.css">
-      <publishTime>11/05/2017 02:13:34</publishTime>
+      <publishTime>02/21/2018 10:56:52</publishTime>
     </File>
     <File Include="Content/css/drawer.min.css">
       <publishTime>10/14/2017 18:57:10</publishTime>
@@ -1885,7 +1885,7 @@
       <publishTime>11/07/2017 00:31:12</publishTime>
     </File>
     <File Include="Content/css/main.css">
-      <publishTime>11/07/2017 01:19:20</publishTime>
+      <publishTime>02/22/2018 01:45:03</publishTime>
     </File>
     <File Include="Content/css/media-queries.css">
       <publishTime>07/20/2015 14:26:16</publishTime>
@@ -1894,7 +1894,7 @@
       <publishTime>10/14/2017 18:57:10</publishTime>
     </File>
     <File Include="Content/css/reset.css">
-      <publishTime>11/30/2017 17:57:48</publishTime>
+      <publishTime>12/11/2017 06:07:34</publishTime>
     </File>
     <File Include="Content/css/style.bak.1.css">
       <publishTime>11/07/2017 00:37:42</publishTime>
@@ -2050,7 +2050,7 @@
       <publishTime>10/14/2017 10:57:50</publishTime>
     </File>
     <File Include="Content/img/b1.jpg">
-      <publishTime>10/27/2017 03:29:46</publishTime>
+      <publishTime>11/10/2017 03:06:48</publishTime>
     </File>
     <File Include="Content/img/b2.jpg">
       <publishTime>10/27/2017 03:20:50</publishTime>
@@ -2176,10 +2176,10 @@
       <publishTime>10/14/2017 10:57:50</publishTime>
     </File>
     <File Include="Content/jquery-ui-1.7.2.custom.css">
-      <publishTime>11/07/2017 00:23:28</publishTime>
+      <publishTime>06/02/2015 06:27:10</publishTime>
     </File>
     <File Include="Content/jquery-ui.css">
-      <publishTime>11/07/2017 00:06:10</publishTime>
+      <publishTime>06/04/2015 03:38:00</publishTime>
     </File>
     <File Include="Content/jquery-ui.js">
       <publishTime>09/11/2017 15:25:50</publishTime>
@@ -2188,10 +2188,10 @@
       <publishTime>10/14/2017 10:58:12</publishTime>
     </File>
     <File Include="Content/js/drawer.js">
-      <publishTime>10/14/2017 10:58:12</publishTime>
+      <publishTime>02/21/2018 03:02:08</publishTime>
     </File>
     <File Include="Content/js/drawer.min.js">
-      <publishTime>10/14/2017 10:58:12</publishTime>
+      <publishTime>02/21/2018 03:02:07</publishTime>
     </File>
     <File Include="Content/js/froogaloop.js">
       <publishTime>10/14/2017 10:58:12</publishTime>
@@ -2233,7 +2233,7 @@
       <publishTime>10/14/2017 10:58:12</publishTime>
     </File>
     <File Include="Content/mng.css">
-      <publishTime>11/07/2017 00:17:52</publishTime>
+      <publishTime>09/16/2017 16:56:32</publishTime>
     </File>
     <File Include="Content/purecss/pure-min.css">
       <publishTime>09/16/2017 17:04:50</publishTime>
@@ -2443,7 +2443,7 @@
       <publishTime>09/11/2017 15:25:50</publishTime>
     </File>
     <File Include="Content/themes/base/resizable.css">
-      <publishTime>11/07/2017 00:19:14</publishTime>
+      <publishTime>06/04/2015 03:51:00</publishTime>
     </File>
     <File Include="Content/themes/base/selectable.css">
       <publishTime>06/04/2015 03:51:00</publishTime>
@@ -2578,7 +2578,7 @@
       <publishTime>09/11/2017 23:26:22</publishTime>
     </File>
     <File Include="Views/FixedPollutionControl/Add.cshtml">
-      <publishTime>11/28/2017 23:19:56</publishTime>
+      <publishTime>02/26/2018 12:18:34</publishTime>
     </File>
     <File Include="Views/FixedPollutionControl/List.cshtml">
       <publishTime>11/28/2017 23:13:18</publishTime>
@@ -2596,7 +2596,7 @@
       <publishTime>11/28/2017 23:23:34</publishTime>
     </File>
     <File Include="Views/ImportantLink/Add.cshtml">
-      <publishTime>11/28/2017 23:20:54</publishTime>
+      <publishTime>02/26/2018 12:18:53</publishTime>
     </File>
     <File Include="Views/ImportantLink/List.cshtml">
       <publishTime>11/28/2017 23:23:42</publishTime>
@@ -2677,10 +2677,10 @@
       <publishTime>12/08/2017 14:05:12</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutNews.cshtml">
-      <publishTime>01/03/2018 10:55:17</publishTime>
+      <publishTime>04/16/2018 15:08:50</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutWebSite.cshtml">
-      <publishTime>12/27/2017 11:58:04</publishTime>
+      <publishTime>04/16/2018 15:09:26</publishTime>
     </File>
     <File Include="Views/Shared/_Pager.cshtml">
       <publishTime>10/16/2017 01:47:46</publishTime>
@@ -2695,43 +2695,43 @@
       <publishTime>12/25/2017 17:45:22</publishTime>
     </File>
     <File Include="Views/WB/About.cshtml">
-      <publishTime>11/30/2017 18:13:20</publishTime>
+      <publishTime>02/22/2018 01:47:05</publishTime>
     </File>
     <File Include="Views/WB/AddPage.cshtml">
-      <publishTime>12/28/2017 22:30:24</publishTime>
+      <publishTime>02/21/2018 10:11:30</publishTime>
     </File>
     <File Include="Views/WB/AddPage2.cshtml">
       <publishTime>01/03/2018 15:22:40</publishTime>
     </File>
     <File Include="Views/WB/Download.cshtml">
-      <publishTime>11/30/2017 18:16:30</publishTime>
+      <publishTime>02/22/2018 01:48:06</publishTime>
     </File>
     <File Include="Views/WB/Index.cshtml">
-      <publishTime>12/27/2017 12:00:48</publishTime>
+      <publishTime>02/21/2018 02:17:02</publishTime>
     </File>
     <File Include="Views/WB/NewsInfo.cshtml">
-      <publishTime>12/25/2017 17:26:34</publishTime>
+      <publishTime>02/22/2018 08:57:33</publishTime>
     </File>
     <File Include="Views/WB/NewsList.cshtml">
-      <publishTime>11/30/2017 18:15:44</publishTime>
+      <publishTime>02/26/2018 12:23:28</publishTime>
     </File>
     <File Include="Views/WB/Open.cshtml">
-      <publishTime>11/30/2017 18:18:42</publishTime>
+      <publishTime>02/22/2018 08:57:25</publishTime>
     </File>
     <File Include="Views/WB/Privacy.cshtml">
-      <publishTime>11/30/2017 18:17:58</publishTime>
+      <publishTime>02/22/2018 08:57:20</publishTime>
     </File>
     <File Include="Views/WB/Sitemap.cshtml">
-      <publishTime>11/30/2017 18:19:34</publishTime>
+      <publishTime>02/22/2018 08:57:15</publishTime>
     </File>
     <File Include="Views/WB/WebLink.cshtml">
-      <publishTime>11/07/2017 01:28:28</publishTime>
+      <publishTime>02/21/2018 10:21:09</publishTime>
     </File>
     <File Include="Views/WB/Website.cshtml">
-      <publishTime>11/30/2017 18:18:22</publishTime>
+      <publishTime>02/22/2018 08:56:57</publishTime>
     </File>
     <File Include="Views/WB/_MenuPartial.cshtml">
-      <publishTime>12/25/2017 16:15:50</publishTime>
+      <publishTime>02/26/2018 15:46:33</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>06/29/2015 17:27:44</publishTime>

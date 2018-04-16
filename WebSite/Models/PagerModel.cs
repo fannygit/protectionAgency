@@ -77,7 +77,7 @@ namespace EPA.Project.WebSite.Models
 
         public PagerModel()
         {
-            PageSize = 25;
+            PageSize = 15;
             Page = 1;
         }
     }
