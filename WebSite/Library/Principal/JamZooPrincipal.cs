@@ -17,6 +17,7 @@ namespace EPA.Project.WebSite.Library.Principal
         public string Name { get; set; }
         public string[] Roles { get; set; }
     }
+    
 
     /// <summary>
     /// http://primaryobjects.com/CMS/Article147.aspx

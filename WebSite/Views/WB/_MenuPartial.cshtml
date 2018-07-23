@@ -1,6 +1,6 @@
 ﻿@using EPA.Project.WebSite.Models
 @model WBModel
-<nav class="drawer-nav" role="navigation" id="webdrawer">
+<nav class="drawer-nav" id="webdrawer">
     <ul class="drawer-menu">
         <li class="drawer-dropdown">
             <a class="drawer-menu-item" href="@Url.Action("NewsList")" data-target="#" data-toggle="dropdown" role="button" aria-expanded="false" title="最新公告" tabindex="9" onMouseOver="MM_showHideLayers('btn1','','show','btn2','','hide','btn3','','hide','btn4','','hide')">最新公告 <span class="drawer-caret"></span></a>
@@ -47,17 +47,9 @@
                 {
                     <li><a href="@item.Url" target="_blank" class="drawer-dropdown-menu-item" title="@item.Title（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Title</a></li>
                 }
-                @*<li><a href="https://totalquantity.epa.gov.tw/ERC/homepage/home.do?method=goHome" target="_blank" class="drawer-dropdown-menu-item" title="空氣污染物削減量差額管理平台（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 空氣污染物削減量差額管理平台</a></li>
-                <li><a href="https://apmis.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="固定空氣污染源管理資訊系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 固定空氣污染源管理資訊系統</a></li>
-                <li><a href="https://air10.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="空氣污染費網路申報及查詢系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i>空氣污染費網路申報及查詢系統</a></li>
-                <li><a href="https://epaconsweb.epa.gov.tw/AccountEPAConsWeb/LoginEPAConsWeb.aspx?ReturnUrl=%2f" target="_blank" class="drawer-dropdown-menu-item" title="營建工程污染管制及收費管理系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i>營建工程污染管制及收費管理系統</a></li>
-                <li><a href="http://a0-empncet-ap.epa.gov.tw/dispPageBox/EmpHP.aspx?ddsPageID=HP" target="_blank" class="drawer-dropdown-menu-item" title="逸散性粒狀污染物管制（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 逸散性粒狀污染物管制</a></li>
-                <li><a href="https://cems.epa.gov.tw/CemsFacReport/" class="drawer-dropdown-menu-item" target="_blank" title="自動連續監測CEMS（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 自動連續監測CEMS</a></li>
-                <li><a href="http://aers.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="重大空氣污染事件應變處理查詢系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 重大空氣污染事件應變處理查詢系統</a></li>
-                <li><a href="https://totalquantity.epa.gov.tw/ERC_TEST/homepage/home.do?method=goHome" target="_blank" class="drawer-dropdown-menu-item" title="空氣污染物削減量差額管理平台(測試版)（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 空氣污染物削減量差額管理平台(測試版)</a></li>*@
+
             </ul>
         </li>
-        
         <li class="drawer-dropdown">
             <a class="drawer-menu-item" href="@Url.Action("download")" title="下載文件專區" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="27" onMouseOver="MM_showHideLayers('btn4','','show','btn2','','hide','btn3','','hide','btn1','','hide')">下載文件專區 <span class="drawer-caret"></span> </a>
             <ul class="drawer-dropdown-menu" id="btn4">
@@ -68,16 +60,6 @@
             </ul>
         </li>
         <li><a class="drawer-menu-item" href="https://epamail.epa.gov.tw/front/mailboxhome" target="_blank" title="意見信箱（另開視窗）" tabindex="31">意見信箱</a></li>
-        <li class="drawer-dropdown hide">
-            <a class="drawer-menu-item" href="#" title="資訊安全" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="27">
-                資訊安全 <span class="drawer-caret"></span>
-            </a>
-            <ul class="drawer-dropdown-menu">
-                <li><a href="@Url.Action("privacy")" class="drawer-dropdown-menu-item" title="隱私權政策"><i class="fa fa-angle-right" aria-hidden="true"></i> 隱私權政策</a></li>
-                <li><a href="@Url.Action("website")" class="drawer-dropdown-menu-item" title="網站安全政策"><i class="fa fa-angle-right" aria-hidden="true"></i> 網站安全政策</a></li>
-                <li><a href="@Url.Action("open")" class="drawer-dropdown-menu-item" title="網站資料開放宣告"><i class="fa fa-angle-right" aria-hidden="true"></i> 網站資料開放宣告</a></li>
-            </ul>
-        </li>
     </ul>
 </nav>
 
@@ -128,14 +110,7 @@
                 {
                     <li><a href="@item.Url" target="_blank" class="drawer-dropdown-menu-item" title="@item.Title（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> @item.Title</a></li>
                 }
-                @*<li><a href="https://totalquantity.epa.gov.tw/ERC/homepage/home.do?method=goHome" target="_blank" class="drawer-dropdown-menu-item" title="空氣污染物削減量差額管理平台（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 空氣污染物削減量差額管理平台</a></li>
-                <li><a href="https://apmis.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="固定空氣污染源管理資訊系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 固定空氣污染源管理資訊系統</a></li>
-                <li><a href="https://air10.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="空氣污染費網路申報及查詢系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i>空氣污染費網路申報及查詢系統</a></li>
-                <li><a href="https://epaconsweb.epa.gov.tw/AccountEPAConsWeb/LoginEPAConsWeb.aspx?ReturnUrl=%2f" target="_blank" class="drawer-dropdown-menu-item" title="營建工程污染管制及收費管理系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i>營建工程污染管制及收費管理系統</a></li>
-                <li><a href="http://a0-empncet-ap.epa.gov.tw/dispPageBox/EmpHP.aspx?ddsPageID=HP" target="_blank" class="drawer-dropdown-menu-item" title="逸散性粒狀污染物管制（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 逸散性粒狀污染物管制</a></li>
-                <li><a href="https://cems.epa.gov.tw/CemsFacReport/" class="drawer-dropdown-menu-item" target="_blank" title="自動連續監測CEMS（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 自動連續監測CEMS</a></li>
-                <li><a href="http://aers.epa.gov.tw/" class="drawer-dropdown-menu-item" target="_blank" title="重大空氣污染事件應變處理查詢系統（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 重大空氣污染事件應變處理查詢系統</a></li>
-                <li><a href="https://totalquantity.epa.gov.tw/ERC_TEST/homepage/home.do?method=goHome" target="_blank" class="drawer-dropdown-menu-item" title="空氣污染物削減量差額管理平台(測試版)（另開視窗）"><i class="fa fa-angle-right" aria-hidden="true"></i> 空氣污染物削減量差額管理平台(測試版)</a></li>*@
+
             </ul>
         </li>
         

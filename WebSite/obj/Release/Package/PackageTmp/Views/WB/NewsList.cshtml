@@ -8,7 +8,7 @@
     <!--cntnav -->
 
     <div class="cntnav n1" id="contentText">
-        <p><a href="@Url.Action("newslist")" accesskey="L" title="左方導覽區塊" class="dooo">:::　</a>最新公告</p>
+        <p><a href="#L" id="L" accesskey="L" title="左方導覽區塊" class="dooo">:::　</a>最新公告</p>
         <ul style="list-style:none;" class="cntmenu">
             @foreach (var item in Model.NewsBulletinList)
             {
@@ -32,13 +32,12 @@
     <div class="content" id="contentText">
         <h2>
         <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 
-        @Model.NewsTitle
-        <span> 
-            <a href="@Url.Action("newslist")" accesskey="C" title="中央內容區塊">:::　</a>
+        @Model.NewsTitle</h2>
+        <div class="reelink">
+            <a href="@Url.Action("newslist")#C" id="C" accesskey="C" title="中央內容區塊">:::　</a>
             <a href="@Url.Action("Index")" title="首頁"> <i class="fa fa-home" aria-hidden="true"></i>首頁</a>
              &gt; 最新公告 &gt; @Model.NewsTitle
-         </span>
-        </h2>
+         </div>
         <div class="datetab">
             <div class="scroll tab400">
                 <div class="nword">
@@ -54,18 +53,9 @@
                             {
                                 url = item.Url;
                             }
-                            <li><a href="@url" title="@Model.NewsTitle"><span class="day">@item.CreateTime.ToString("yyyy/MM/dd") </span><span class="green">【@Model.NewsTitle】</span><span class="blueword">@item.Title</span></a></li>
+                            <li><a href="@url" title="@Model.NewsTitle"><span class="day">@item.CreateTime.ToString("yyyy/MM/dd") </span><span class="green">【@Model.NewsTitle】</span><span class="blueword"><h3>@item.Title</h3></span></a></li>
                         }
-                        
-                        @*<li><a href="new_info.html" title="最新消息"><span class="day">2017/08/30 </span><span class="green">【最新消息】</span><span class="blueword">公告「移動污染源空氣污染防制費收費費率」修正</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/03/16 </span><span class="green">【最新消息】</span><span class="blueword">攜手地方 跨界合作 科學佐證 清淨空氣 中部空氣品質與能見度聯合監測啟動儀式</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/08/30 </span><span class="green">【最新消息】</span><span class="blueword">公告「移動污染源空氣污染防制費收費費率」修正</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/03/16 </span><span class="green">【最新消息】</span><span class="blueword">攜手地方 跨界合作 科學佐證 清淨空氣 中部空氣品質與能見度聯合監測啟動儀式</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/08/30 </span><span class="green">【最新消息】</span><span class="blueword">公告「移動污染源空氣污染防制費收費費率」修正</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/03/16 </span><span class="green">【最新消息】</span><span class="blueword">攜手地方 跨界合作 科學佐證 清淨空氣 中部空氣品質與能見度聯合監測啟動儀式</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/08/30 </span><span class="green">【最新消息】</span><span class="blueword">公告「移動污染源空氣污染防制費收費費率」修正</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/03/16 </span><span class="green">【最新消息】</span><span class="blueword">攜手地方 跨界合作 科學佐證 清淨空氣 中部空氣品質與能見度聯合監測啟動儀式</span></a></li>
-                        <li><a href="new_info.html" title="最新消息"><span class="day">2017/08/30 </span><span class="green">【最新消息】</span><span class="blueword">公告「移動污染源空氣污染防制費收費費率」修正</span></a></li>*@
+ 
                     </ul>
                 </div>
             </div>

@@ -26,13 +26,13 @@
                     </section>
                     <!-- banner end-->
                     <div class="idxnew" id="contentText">
-                        <a href="#" accesskey="C" title="上方資訊導盲磚">:::　</a>
+                        <a href="#C" id="C" accesskey="C" title="中央內容區塊">:::　</a>
                         <div class="idxnewh1"><h2><span>What's New </span>最新活動&amp;消息123</h2></div>
                         <div class="nword">
                             <ul style="list-style: none;">
                                 @foreach (var n in Model.News)
                                 {
-                                    <li style="list-style: none;"><a href="@Url.Action("newsinfo", new { info_id = n.Id })" title="最新消息"><span class="day">@n.CreateTime.ToString("yyyy/MM/dd") </span><span class="green">【最新消息】</span><span class="blueidx">@n.Title</span></a></li>
+                                    <li style="list-style: none;"><a href="@Url.Action("newsinfo", new { info_id = n.Id })" title="最新消息"><span class="day">@n.CreateTime.ToString("yyyy/MM/dd") </span><span class="green">【最新消息】</span><span class="blueidx"><h3>@n.Title</h3></span></a></li>
                                 }
                             </ul>
                         </div>

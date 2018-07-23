@@ -971,3 +971,4 @@ D:\Protection-Agency\WebSite\bin\zh-Hant\System.Web.WebPages.Deployment.resource
 D:\Protection-Agency\WebSite\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
 D:\Protection-Agency\WebSite\obj\Debug\WebSite.dll
 D:\Protection-Agency\WebSite\obj\Debug\WebSite.pdb
+D:\Protection-Agency\WebSite\obj\Debug\WebSite.csprojResolveAssemblyReference.cache

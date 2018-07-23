@@ -53,7 +53,7 @@ namespace EPA.Project.WebSite.Controllers
                 //儲存圖片至Server
                 upload.SaveAs(Server.MapPath("~/App_Data/UploadFile/" + FileName));
 
-                var imageUrl = "http://52.187.122.112/File/Get?FileId=" + FileName;
+                var imageUrl = "https://ernet.epa.gov.tw/File/Get?FileId=" + FileName;
 
                 var vMessage = string.Empty;
 
@@ -63,6 +63,5 @@ namespace EPA.Project.WebSite.Controllers
 
             return Content(result);
         }
-
     }
 }
